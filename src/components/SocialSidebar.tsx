@@ -28,7 +28,7 @@ const SocialSidebar: React.FC = () => {
       {/* Phone Call Button - Bottom Left */}
       <div className="fixed bottom-6 left-6 z-40">
         <a
-          href="tel:+918035386343"
+          href="tel:+911234567890"
           className="w-14 h-14 bg-gradient-to-r from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-pulse"
           aria-label="Call us"
         >

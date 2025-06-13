@@ -35,21 +35,14 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 lg:px-8 xl:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className={`text-2xl lg:text-3xl font-bold font-playfair transition-all duration-300 ${
-              isScrolled ? 'text-slate-800' : 'text-white drop-shadow-lg'
-            }`}>
-              VIRAR
-              <span className={`ml-2 inline-block w-2 h-2 rounded-full transition-colors duration-300 ${
-                isScrolled ? 'bg-gold-500' : 'bg-gold-400'
-              }`}></span>
-            </h1>
-            <div className={`text-xs font-medium tracking-widest mt-0.5 transition-colors duration-300 ${
-              isScrolled ? 'text-slate-500' : 'text-white/80'
-            }`}>
-              THE CLASSIC RESIDENCE
-            </div>
-          </div>
+       <div className="flex-shrink-0">
+  <img
+    src="/logo.svg"
+    alt="Embrace The Wind Logo"
+    className="h-12 w-auto transition-all duration-300"
+  />
+</div>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center space-x-8">
@@ -92,12 +85,12 @@ const Header: React.FC = () => {
                     Call Now
                   </div>
                   <a 
-                    href="tel:+918035386343"
+                    href="tel:+911234567890"
                     className={`text-sm font-semibold transition-colors duration-300 hover:scale-105 ${
                       isScrolled ? 'text-slate-700 hover:text-gold-600' : 'text-white hover:text-gold-300'
                     }`}
                   >
-                    +91 80353 86343
+                    +91 1234567890
                   </a>
                 </div>
               </div>
@@ -119,12 +112,12 @@ const Header: React.FC = () => {
                     Email Us
                   </div>
                   <a 
-                    href="mailto:info@viraya.co.in"
+                    href="mailto:info@.embracethewind.in"
                     className={`text-sm font-semibold transition-colors duration-300 hover:scale-105 ${
                       isScrolled ? 'text-slate-700 hover:text-gold-600' : 'text-white hover:text-gold-300'
                     }`}
                   >
-                    info@viraya.co.in
+                    info@.embracethewind.in
                   </a>
                 </div>
               </div>
@@ -193,10 +186,10 @@ const Header: React.FC = () => {
                   <div>
                     <div className="text-sm font-medium text-slate-500">Call Now</div>
                     <a 
-                      href="tel:+918035386343"
+                      href="tel:+911234567890"
                       className="text-lg font-semibold text-slate-700 hover:text-gold-600 transition-colors duration-300"
                     >
-                      +91 80353 86343
+                      +91 1234567890
                     </a>
                   </div>
                 </div>
@@ -208,10 +201,10 @@ const Header: React.FC = () => {
                   <div>
                     <div className="text-sm font-medium text-slate-500">Email Us</div>
                     <a 
-                      href="mailto:info@viraya.co.in"
+                      href="mailto:info@.embracethewind.in"
                       className="text-lg font-semibold text-slate-700 hover:text-gold-600 transition-colors duration-300"
                     >
-                      info@viraya.co.in
+                      info@.embracethewind.in
                     </a>
                   </div>
                 </div>

@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
             {/* Logo */}
             <div>
               <h2 className="text-3xl font-bold font-playfair text-white mb-2">
-                VIRAR
+                 Embrace The Wind
                 <span className="ml-2 inline-block w-2 h-2 bg-gold-400 rounded-full"></span>
               </h2>
               <div className="text-sm font-medium tracking-widest text-white/70">
@@ -65,8 +65,7 @@ const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-gold-400 mt-1 flex-shrink-0" />
                 <p className="text-white/80 leading-relaxed">
-                  52D, Bondel Road, Ballygunge Park,<br />
-                  Ballygunge, Kolkata - 700019
+                  SG Highway Ahmedabad
                 </p>
               </div>
             </div>
@@ -134,10 +133,10 @@ const Footer: React.FC = () => {
                 <div>
                   <p className="text-white/60 text-sm">Call Now</p>
                   <a 
-                    href="tel:+918035386343"
+                    href="tel:+911234567890"
                     className="text-xl font-bold text-white hover:text-gold-400 transition-colors duration-300"
                   >
-                    +91 80353 86343
+                   +91 1234567890
                   </a>
                 </div>
               </div>
@@ -150,10 +149,10 @@ const Footer: React.FC = () => {
                 <div>
                   <p className="text-white/60 text-sm">Email Us</p>
                   <a 
-                    href="mailto:info@viraya.co.in"
+                    href="mailto:info@.embracethewind.in"
                     className="text-xl font-bold text-white hover:text-gold-400 transition-colors duration-300"
                   >
-                    info@viraya.co.in
+                    info@.embracethewind.in
                   </a>
                 </div>
               </div>
@@ -184,10 +183,13 @@ const Footer: React.FC = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-white/60 text-sm">
-              Copyright © 2025 Viraya | All rights reserved
+              Copyright © 2025 Embrace The Wind | All rights reserved
             </p>
             <p className="text-white/60 text-sm">
-              Designed by <span className="text-gold-400 font-semibold">dharma.fi</span>
+              Designed by 
+              <a href="https://infinitydesignhub.com/">
+                  <span className="text-gold-400 font-semibold cursor-pointer">infinitydesignhub</span>
+              </a>
             </p>
           </div>
         </div>

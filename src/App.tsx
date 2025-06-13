@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import SocialSidebar from './components/SocialSidebar';
@@ -31,10 +30,10 @@ function App() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "RealEstateAgent",
-            "name": "VIRAR - The Classic Residence",
+            "name": "Embrace The Wind - The Classic Residence",
             "description": "Luxury 4BHK homes with triple height balconies in premium location",
             "telephone": "+91-80353-86343",
-            "email": "info@viraya.co.in",
+            "email": "info@embracethewind.in",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "52D, Bondel Road, Ballygunge Park",
