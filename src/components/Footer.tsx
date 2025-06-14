@@ -133,10 +133,10 @@ const Footer: React.FC = () => {
                 <div>
                   <p className="text-white/60 text-sm">Call Now</p>
                   <a 
-                    href="tel:+911234567890"
+                    href="tel:+919797976577"
                     className="text-xl font-bold text-white hover:text-gold-400 transition-colors duration-300"
                   >
-                   +91 1234567890
+                   +91 9797976577
                   </a>
                 </div>
               </div>
@@ -149,10 +149,10 @@ const Footer: React.FC = () => {
                 <div>
                   <p className="text-white/60 text-sm">Email Us</p>
                   <a 
-                    href="mailto:info@.embracethewind.in"
+                    href="mailto:Embracethewind33@gmail.com"
                     className="text-xl font-bold text-white hover:text-gold-400 transition-colors duration-300"
                   >
-                    info@.embracethewind.in
+                    Embracethewind33@gmail.com
                   </a>
                 </div>
               </div>
