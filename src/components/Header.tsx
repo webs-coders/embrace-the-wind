@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 
@@ -40,10 +41,11 @@ const Header: React.FC = () => {
         <div className="flex item-center justify-between py-3 lg:py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img
+            <Image
               src="/logo.svg"
               alt="Embrace The Wind"
               className="h-10 w-auto transition-all duration-300"
+              width={40} height={40}
             />
           </div>
 

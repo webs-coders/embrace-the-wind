@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Sparkles } from 'lucide-react';
-
+import Image from 'next/image';
 const LifestyleSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -77,11 +77,14 @@ const LifestyleSection: React.FC = () => {
           }}
         >
           <div className="relative group">
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-full object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500"
-            />
+          <div className="relative w-full h-full rounded-2xl overflow-hidden">
+  <Image
+    src={image.src}
+    alt={image.alt}
+    fill
+    className="object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500"
+  />
+</div>
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             
             {/* Sparkle effect on hover */}

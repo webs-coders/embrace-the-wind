@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Waves, Dumbbell, Users, Gamepad2, Home, Bot as Lotus, Baby, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Waves, Dumbbell, Users, Gamepad2, Home, Bot as Lotus, Baby } from 'lucide-react';
 
 const AmenitiesSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);

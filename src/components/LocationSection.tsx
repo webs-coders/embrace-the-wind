@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { MapPin, Navigation, Clock, Car, Train, Plane, School, Guitar as Hospital, ShoppingBag } from 'lucide-react';
+import { MapPin, Navigation, Car, Train, Plane, School, Guitar as Hospital, ShoppingBag } from 'lucide-react';
 
 const LocationSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);

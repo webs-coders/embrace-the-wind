@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Building, Home, Download } from 'lucide-react';
+import Image from 'next/image';
 
 const OverviewSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -40,12 +41,14 @@ const OverviewSection: React.FC = () => {
           {/* Left Side - Image */}
           <div className={`relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <img
-                src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Luxury Interior - VIRAR Classic Residence"
-                className="w-full h-[600px] object-cover"
-              />
-              
+          <div className="relative w-full h-[600px]">
+  <Image
+    src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800"
+    alt="Luxury Interior - VIRAR Classic Residence"
+    fill
+    className="object-cover"
+  />
+</div>
               {/* Overlay with VIRAR branding */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
               <div className="absolute bottom-8 left-8">

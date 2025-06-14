@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Building, Home, MapPin, Ruler, Users, Car, TreePine, Waves, Shield, Zap, Wifi, Camera, Wind } from 'lucide-react';
+import Image from 'next/image';
+import { Building, Home, Waves, Shield, Zap, Wifi, Wind } from 'lucide-react';
 
 const SpecificationsSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -122,32 +123,25 @@ const SpecificationsSection: React.FC = () => {
   }, []);
 
   return (
-    <section 
-      ref={sectionRef}
-      className="py-20 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden"
-      id="specifications"
-    >
+    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden" id="specifications">
       {/* Hero Section */}
       <div className="relative h-[60vh] mb-20">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1920"
             alt="VIRAR Specifications - Luxury Interior"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-800/60 to-slate-900/80"></div>
         </div>
-        
         <div className="relative z-10 container mx-auto px-4 lg:px-8 h-full flex items-center justify-center">
           <div className="text-center">
-            <h1 className={`font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
+            <h1 className={`font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               Specifications
             </h1>
-            <p className={`text-xl text-white/90 max-w-2xl mx-auto transition-all duration-1000 delay-300 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
+            <p className={`text-xl text-white/90 max-w-2xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               Discover the premium finishes and world-class amenities that define luxury living at VIRAR
             </p>
           </div>
@@ -159,11 +153,12 @@ const SpecificationsSection: React.FC = () => {
           {/* Left Side - Building Image */}
           <div className={`lg:col-span-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="sticky top-8">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                <Image
                   src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600"
                   alt="VIRAR Building Exterior"
-                  className="w-full h-[500px] object-cover"
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6">
@@ -188,8 +183,7 @@ const SpecificationsSection: React.FC = () => {
           {/* Right Side - Specifications */}
           <div className={`lg:col-span-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="space-y-12">
-              {/* Main Specifications */}
-              {Object.entries(specifications).map(([category, items], categoryIndex) => (
+              {Object.entries(specifications).map(([category, items]) => (
                 <div key={category} className="bg-white rounded-2xl shadow-lg overflow-hidden">
                   <div className="bg-gradient-to-r from-gold-500 to-gold-600 px-6 py-4">
                     <h3 className="font-playfair text-2xl font-bold text-white">{category}</h3>
@@ -207,9 +201,8 @@ const SpecificationsSection: React.FC = () => {
                 </div>
               ))}
 
-              {/* Additional Specifications */}
               <div className="grid md:grid-cols-2 gap-8">
-                {Object.entries(additionalSpecs).map(([category, items], categoryIndex) => (
+                {Object.entries(additionalSpecs).map(([category, items]) => (
                   <div key={category} className="bg-white rounded-2xl shadow-lg overflow-hidden">
                     <div className="bg-slate-800 px-6 py-4">
                       <h3 className="font-playfair text-xl font-bold text-white">{category}</h3>
@@ -228,7 +221,6 @@ const SpecificationsSection: React.FC = () => {
                 ))}
               </div>
 
-              {/* Key Features Grid */}
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 text-white">
                 <h3 className="font-playfair text-3xl font-bold text-gold-400 mb-8 text-center">Key Features</h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -254,11 +246,8 @@ const SpecificationsSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Download Brochure CTA */}
               <div className="text-center bg-gradient-to-r from-gold-500 to-gold-600 rounded-2xl p-8">
-                <h3 className="font-playfair text-2xl font-bold text-white mb-4">
-                  Get Complete Specifications
-                </h3>
+                <h3 className="font-playfair text-2xl font-bold text-white mb-4">Get Complete Specifications</h3>
                 <p className="text-white/90 mb-6">
                   Download our detailed brochure for comprehensive specifications and floor plans
                 </p>

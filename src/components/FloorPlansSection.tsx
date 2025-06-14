@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Download, MapPin, Car, TreePine, Home, Shield, Waves } from 'lucide-react';
+import { Download, MapPin, Car, TreePine, Home, Shield } from 'lucide-react';
+import Image from 'next/image';
 
 const FloorPlansSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -131,11 +132,13 @@ const FloorPlansSection: React.FC = () => {
               {/* Floor Plan Image */}
               <div className="lg:col-span-2">
                 <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden">
-                  <img
-                    src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    alt="Master Floor Plan - VIRAR Classic Residence"
-                    className="w-full h-[500px] object-cover"
-                  />
+<Image
+  src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
+  alt="Master Floor Plan - VIRAR Classic Residence"
+  width={800}
+  height={500}
+  className="w-full h-[500px] object-cover"
+/>
                   
                   {/* Overlay with compass */}
                   <div className="absolute bottom-4 right-4 w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
