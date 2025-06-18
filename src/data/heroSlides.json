@@ -1,21 +1,21 @@
 [
   {
-    "image": "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    "image": "./images/EMBRACETHEWIND1.jpg",
     "title": "The Classic Residence",
     "subtitle": "Live the elite life in 4BHK homes with triple height balconies"
   },
   {
-    "image": "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    "image": "./images/EMBRACETHEWIND2.jpg",
     "title": "Luxury Living Redefined",
     "subtitle": "Experience premium amenities and world-class architecture"
   },
   {
-    "image": "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    "image": "./images/EMBRACETHEWIND3.jpg",
     "title": "Modern Elegance",
     "subtitle": "Sophisticated design meets contemporary comfort"
   },
   {
-    "image": "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    "image": "./images/EMBRACETHEWIND5.jpg",
     "title": "Premium Lifestyle",
     "subtitle": "Where luxury meets convenience in every detail"
   }
