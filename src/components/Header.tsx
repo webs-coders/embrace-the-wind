@@ -122,7 +122,7 @@ const Header = () => {
               />
             </Link>
           ) : (
-            <a
+            <Link
               key={label}
               href={href}
               className={`relative text-xs font-semibold uppercase tracking-widest ${linkColor} group`}
@@ -131,7 +131,7 @@ const Header = () => {
               <span
                 className={`absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${underlineColor}`}
               />
-            </a>
+            </Link>
           )
         )}
       </nav>
@@ -151,14 +151,14 @@ const Header = () => {
                   {label}
                 </Link>
               ) : (
-                <a
+                <Link
                   key={label}
                   href={href}
                   onClick={() => setIsMenuOpen(false)}
                   className="block text-[#1A1A1A] font-semibold hover:text-[#FF6A00]"
                 >
                   {label}
-                </a>
+                </Link>
               )
             )}
           </div>

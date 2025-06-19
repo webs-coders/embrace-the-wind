@@ -11,7 +11,7 @@ export default function AmenitiesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[80vh] w-full bg-cover bg-center bg-[url('/placeholder-hero.jpg')]">
+      <section className="relative h-[80vh] w-full bg-cover bg-center bg-[url('/images/EMBRACETHEWIND2.jpg')]">
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <h1 className="text-white text-5xl md:text-6xl font-bold">
            Floor Plan
