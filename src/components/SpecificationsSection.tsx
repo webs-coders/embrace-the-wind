@@ -15,7 +15,7 @@ const SpecificationsSection: React.FC = () => {
 
   return (
     <section id="specifications" className="relative overflow-hidden bg-slate-50 dark:bg-slate-950">
-      <SectionHeader />
+      <SectionHeader isVisible={false} />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-10 space-y-24">
 
