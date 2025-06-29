@@ -42,13 +42,15 @@ const Header = () => {
       {/* Top Row */}
       <div className="container mx-auto px-4 flex items-center justify-between py-2 lg:py-3">
         <Link href="/">
-          <Image
-            src="/Embrace.svg"
-            alt="Logo"
-            width={100}
-            height={100}
-            priority
-          />
+          <Link href="/">
+            <Image
+              src={isScrolled ? "/Embrace.svg" : "/white-Logo-png.png"}
+              alt="Logo"
+              width={100}
+              height={100}
+              priority
+            />
+          </Link>
         </Link>
 
         <div className="hidden lg:flex items-center space-x-6">
