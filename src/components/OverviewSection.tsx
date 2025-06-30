@@ -44,16 +44,16 @@ const OverviewSection: React.FC = () => {
           <div className="relative w-full h-[600px]">
   <Image
     src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800"
-    alt="Luxury Interior - VIRAR Classic Residence"
+    alt="Luxury Interior - Embrace The Wind Classic Residence"
     fill
     className="object-cover"
   />
 </div>
-              {/* Overlay with VIRAR branding */}
+              {/* Overlay with Embrace The Wind branding */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
               <div className="absolute bottom-8 left-8">
                 <h3 className="font-playfair text-4xl font-bold text-white mb-2">
-                  VIRAR
+                  Embrace The Wind
                 </h3>
                 <div className="w-2 h-2 bg-gold-400 rounded-full inline-block"></div>
               </div>
