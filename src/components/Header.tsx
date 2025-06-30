@@ -22,7 +22,7 @@ const Header = () => {
     { label: "Gallery", href: "/gallery" },
     { label: "Location", href: "/location" },
     { label: "Builders", href: "/builders" },
-    { label: "Contact Us", href: "/contact-us" },
+    { label: "Contact Us", href: "/contact" },
   ];
 
   const linkColor = isScrolled
