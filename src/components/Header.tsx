@@ -15,7 +15,7 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: "Overview", href: "#overview" },
+    { label: "Overview", href: "/#overview" },
     { label: "Specifications", href: "/specifications", isPage: true },
     { label: "Amenities", href: "/amenities" },
     { label: "Floor Plans", href: "/floor-plans" },
@@ -42,7 +42,6 @@ const Header = () => {
       {/* Top Row */}
       <div className="container mx-auto px-4 flex items-center justify-between py-2 lg:py-3">
         <Link href="/">
-          <Link href="/">
             <Image
               src={isScrolled ? "/Embrace.svg" : "/white-Logo-png.png"}
               alt="Logo"
@@ -50,7 +49,6 @@ const Header = () => {
               height={100}
               priority
             />
-          </Link>
         </Link>
 
         <div className="hidden lg:flex items-center space-x-6">
