@@ -6,15 +6,18 @@ const ContactDetails = () => {
       <div className="space-y-4">
         <div>
           <p className="font-bold">Site Address:</p>
-          <p>52D, Bondel Road, Kolkata - 700019</p>
+          <p>
+            Embrace The Wind, B/h McDonald&apos;s On S.G. Highway, Sargasan
+            Cross Road, Sargasan, Gandhinagar - 382421.
+          </p>
         </div>
         <div>
           <p className="font-bold">Phone:</p>
-          <p>+91 98353 88434</p>
+          <p>+91 9797976577</p>
         </div>
         <div>
           <p className="font-bold">Email:</p>
-          <p>info@viraya.co.in</p>
+          <p>Embracethewind33@gmail.com</p>
         </div>
       </div>
     </div>

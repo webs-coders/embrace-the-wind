@@ -18,7 +18,7 @@ const BuildersSection = () => {
             </div>
             <div>
               <h3 className="text-3xl font-bold mb-4">{builder.name}</h3>
-              <div className="h-1 w-12 bg-yellow-500 mb-4"></div>
+              <div className="h-1 w-12 bg-[#FF6A00] mb-4"></div>
               <p className="text-lg leading-relaxed">{builder.description}</p>
             </div>
           </div>

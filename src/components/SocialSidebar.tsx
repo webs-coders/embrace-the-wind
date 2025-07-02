@@ -1,12 +1,10 @@
 import React from 'react';
-import { Facebook, Instagram, Twitter, Youtube, Phone } from 'lucide-react';
+import { Facebook, Instagram, Phone } from 'lucide-react';
 
 const SocialSidebar: React.FC = () => {
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Youtube, href: '#', label: 'YouTube' },
+    { icon: Facebook, href: 'https://www.facebook.com/profile.php?viewas=100000686899395&id=61577706320289', label: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/embracethewind_/', label: 'Instagram' },
   ];
 
   return (

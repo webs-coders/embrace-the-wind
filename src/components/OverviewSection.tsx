@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Building, Home, Download } from 'lucide-react';
-import Image from 'next/image';
+import React, { useEffect, useRef, useState } from "react";
+import { Building, Home, Download } from "lucide-react";
+import Image from "next/image";
 
 const OverviewSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -26,7 +26,7 @@ const OverviewSection: React.FC = () => {
   }, []);
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       className="py-20 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden"
       id="overview"
@@ -39,16 +39,22 @@ const OverviewSection: React.FC = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Image */}
-          <div className={`relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div
+            className={`relative transition-all duration-1000 ${
+              isVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-10"
+            }`}
+          >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-          <div className="relative w-full h-[600px]">
-  <Image
-    src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800"
-    alt="Luxury Interior - Embrace The Wind Classic Residence"
-    fill
-    className="object-cover"
-  />
-</div>
+              <div className="relative w-full h-[600px]">
+                <Image
+                  src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Luxury Interior - Embrace The Wind Classic Residence"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               {/* Overlay with Embrace The Wind branding */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
               <div className="absolute bottom-8 left-8">
@@ -57,14 +63,20 @@ const OverviewSection: React.FC = () => {
                 </h3>
                 <div className="w-2 h-2 bg-gold-400 rounded-full inline-block"></div>
               </div>
-              
+
               {/* Decorative gold circle */}
               <div className="absolute top-8 left-8 w-16 h-16 bg-gold-400 rounded-full opacity-80"></div>
             </div>
           </div>
 
           {/* Right Side - Content */}
-          <div className={`space-y-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+          <div
+            className={`space-y-8 transition-all duration-1000 delay-300 ${
+              isVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-10"
+            }`}
+          >
             {/* Section Label */}
             <div>
               <span className="inline-block px-4 py-2 bg-gold-100 text-gold-700 rounded-full text-sm font-semibold uppercase tracking-wider mb-4">
@@ -82,7 +94,7 @@ const OverviewSection: React.FC = () => {
 
             {/* Description */}
             <p className="text-lg text-slate-600 leading-relaxed">
-              Live the elite life in 4BHK homes with triple height balconies.
+              Live the elite life in 3 & 4BHK homes with triple height balconies.
             </p>
 
             {/* Stats */}
@@ -97,7 +109,7 @@ const OverviewSection: React.FC = () => {
                     Total Units
                   </p>
                   <p className="text-2xl font-bold text-slate-800">
-                    <span className="text-gold-600">48</span> (4 BHK)
+                    <span className="text-gold-600">352</span> (3 & 4 BHK)
                   </p>
                 </div>
               </div>
@@ -112,7 +124,7 @@ const OverviewSection: React.FC = () => {
                     Total Tower
                   </p>
                   <p className="text-2xl font-bold text-slate-800">
-                    <span className="text-gold-600">ONE</span> (B+G+18)
+                    <span className="text-gold-600">5</span> (B+G+18)
                   </p>
                 </div>
               </div>

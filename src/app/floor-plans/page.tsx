@@ -38,7 +38,6 @@ export default function AmenitiesPage() {
 
       {/* Amenities Gallery */}
       <AmenitiesGallery />
-
       <Footer />
       <SocialSidebar />
     </div>

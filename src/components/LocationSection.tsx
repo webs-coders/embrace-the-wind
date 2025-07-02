@@ -79,12 +79,12 @@ const LocationSection: React.FC = () => {
           <div className="mb-10 space-y-5">
             <h3 className="text-2xl font-bold text-gold-400 font-playfair">Connectivity Highlights</h3>
             {connectivityFeatures.map((feature, idx) => {
-              const Icon = feature.icon;
+              // const Icon = feature.icon;
               return (
                 <div key={idx} className="bg-slate-800/40 p-5 rounded-lg hover:bg-slate-800/60 transition">
                   <div className="flex gap-4 items-start">
                     <div className="p-3 bg-gold-500/10 rounded-full">
-                      <Icon className="text-gold-400 w-5 h-5" />
+                      {/* <Icon className="text-gold-400 w-5 h-5" /> */}
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">{feature.title}</h4>
@@ -103,12 +103,12 @@ const LocationSection: React.FC = () => {
             <h3 className="text-2xl font-bold text-gold-400 font-playfair">Nearby Essentials</h3>
             <div className="grid sm:grid-cols-2 gap-4">
               {nearbyPlaces.map((place, idx) => {
-                const Icon = place.icon;
+                // const Icon = place.icon;
                 return (
                   <div key={idx} className="flex items-center justify-between bg-slate-800/30 p-4 rounded-lg hover:bg-slate-800/50 transition group">
                     <div className="flex items-center gap-3">
                       <div className="p-2 bg-gold-500/10 rounded-full group-hover:bg-gold-500/20">
-                        <Icon className="text-gold-400 w-4 h-4" />
+                        {/* <Icon className="text-gold-400 w-4 h-4" /> */}
                       </div>
                       <span className="text-white/90 text-sm">{place.name}</span>
                     </div>
