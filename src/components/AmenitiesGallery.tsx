@@ -1,70 +1,26 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight, Play } from "lucide-react";
+import { amenitySlides, AmenitySlide } from "@/data/amenitieData";
 
 const AmenitiesGallery: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const amenitySlides = [
-    {
-      id: "01",
-      title: "Lounge Area",
-      description:
-        "Relax and unwind in our sophisticated lounge with premium furnishings and ambient lighting.",
-      image:
-        "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    },
-    {
-      id: "02",
-      title: "Game Room",
-      description:
-        "Unwind with your close ones over a game of pool, or just relax watching your friends play!",
-      image:
-        "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    },
-    {
-      id: "03",
-      title: "Party Hall",
-      description:
-        "Host memorable celebrations in our elegant party hall with modern amenities.",
-      image:
-        "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    },
-    {
-      id: "04",
-      title: "Fitness Center",
-      description:
-        "State-of-the-art fitness equipment with panoramic city views to energize your workout.",
-      image:
-        "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    },
-    {
-      id: "05",
-      title: "Swimming Pool",
-      description:
-        "Take a refreshing dip in our infinity pool overlooking the city skyline.",
-      image:
-        "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    },
-  ];
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
+          if (entry.isIntersecting) setIsVisible(true);
         });
       },
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
     return () => observer.disconnect();
   }, []);
@@ -86,95 +42,91 @@ const AmenitiesGallery: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-slate-100 relative overflow-hidden"
       id="amenities-gallery"
+      className="relative overflow-hidden py-16 bg-slate-100"
     >
       <div className="container mx-auto px-4 lg:px-8">
-        {/* Main Slider */}
-        <div className="relative">
-          {/* Slider Container */}
-          <div className="relative h-[70vh] rounded-3xl overflow-hidden shadow-2xl">
-            {amenitySlides.map((slide, index) => (
-              <div
-                key={slide.id}
-                className={`absolute inset-0 transition-opacity duration-1000 ${
-                  index === currentSlide ? "opacity-100" : "opacity-0"
-                }`}
-              >
-                <div className="relative w-full h-64">
-                  <Image
-                    src={slide.image}
-                    alt={slide.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+        {/* Main Image Slider */}
+        <div className="relative h-[70vh] rounded-2xl overflow-hidden shadow-xl">
+          {amenitySlides.map((slide: AmenitySlide, index) => (
+            <div
+              key={slide.id}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              {/* Background Image */}
+              <Image
+                src={slide.image}
+                alt={slide.title}
+                fill
+                className="object-cover"
+              />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-transparent"></div>
+              {/* Dark Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
 
-                {/* Content */}
-                <div className="absolute left-8 lg:left-16 top-1/2 transform -translate-y-1/2 max-w-lg">
-                  {/* Slide Number */}
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-12 h-12 bg-gold-400 rounded-full flex items-center justify-center">
-                      <Play className="w-5 h-5 text-slate-900" />
-                    </div>
-                    <span className="text-gold-400 font-bold text-lg">
-                      {slide.id}/0{amenitySlides.length}
-                    </span>
+              {/* Slide Text */}
+              <div className="absolute left-6 lg:left-16 top-1/2 -translate-y-1/2 max-w-lg space-y-4 text-white">
+                {/* Number and Icon */}
+                <div className="flex items-center space-x-4">
+                  <div className="w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center">
+                    <Play size={18} />
                   </div>
-
-                  {/* Title */}
-                  <h3
-                    className={`font-playfair text-4xl lg:text-5xl font-bold text-white mb-4 transition-all duration-1000 delay-300 ${
-                      isVisible
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-10"
-                    }`}
-                  >
-                    {slide.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p
-                    className={`text-lg text-white/90 leading-relaxed transition-all duration-1000 delay-500 ${
-                      isVisible
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-10"
-                    }`}
-                  >
-                    {slide.description}
-                  </p>
+                  <span className="text-[#FF6A00] font-bold text-lg">
+                    {slide.id}/0{amenitySlides.length}
+                  </span>
                 </div>
-              </div>
-            ))}
-          </div>
 
-          {/* Navigation Arrows */}
+                {/* Title */}
+                <h3
+                  className={`text-3xl lg:text-5xl font-bold transition-all duration-700 ${
+                    isVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-10"
+                  }`}
+                >
+                  {slide.title}
+                </h3>
+
+                {/* Description */}
+                <p
+                  className={`text-white/90 text-base lg:text-lg transition-all duration-700 delay-300 ${
+                    isVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-10"
+                  }`}
+                >
+                  {slide.description}
+                </p>
+              </div>
+            </div>
+          ))}
+
+          {/* Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all duration-300 z-10"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 hover:scale-110 transition"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft size={20} />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all duration-300 z-10"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 hover:scale-110 transition"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight size={20} />
           </button>
 
           {/* Slide Indicators */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3">
             {amenitySlides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide
-                    ? "bg-gold-400 scale-125"
+                    ? "bg-yellow-400 scale-125"
                     : "bg-white/40 hover:bg-white/60"
                 }`}
               />
@@ -183,14 +135,14 @@ const AmenitiesGallery: React.FC = () => {
         </div>
 
         {/* Thumbnail Navigation */}
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {amenitySlides.map((slide, index) => (
             <button
               key={slide.id}
               onClick={() => goToSlide(index)}
-              className={`relative group rounded-xl overflow-hidden transition-all duration-300 ${
+              className={`relative group overflow-hidden rounded-xl transition transform ${
                 index === currentSlide
-                  ? "ring-4 ring-gold-400 scale-105"
+                  ? "ring-4 ring-yellow-400 scale-105"
                   : "hover:scale-105"
               }`}
             >
@@ -202,17 +154,16 @@ const AmenitiesGallery: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-
               <div
-                className={`absolute inset-0 transition-all duration-300 ${
+                className={`absolute inset-0 ${
                   index === currentSlide
-                    ? "bg-gold-400/20"
-                    : "bg-slate-900/40 group-hover:bg-slate-900/20"
-                }`}
+                    ? "bg-yellow-400/20"
+                    : "bg-black/40 group-hover:bg-black/30"
+                } transition`}
               ></div>
-              <div className="absolute bottom-2 left-2 text-white text-xs font-semibold">
+              <span className="absolute bottom-2 left-2 text-white text-xs font-semibold">
                 {slide.id}
-              </div>
+              </span>
             </button>
           ))}
         </div>

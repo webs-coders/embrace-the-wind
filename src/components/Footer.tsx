@@ -27,9 +27,9 @@ const Footer: React.FC = () => {
 
           {/* Address */}
           <div>
-            <h3 className="font-bold text-lg text-yellow-400 mb-2">SITE ADDRESS</h3>
+            <h3 className="font-bold text-lg text-[#FF6A00] mb-2">SITE ADDRESS</h3>
             <div className="flex items-start justify-center md:justify-start space-x-3">
-              <MapPin className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
+              <MapPin className="w-5 h-5 text-[#FF6A00] mt-1 flex-shrink-0" />
               <p className="text-white/80 text-sm whitespace-pre-line">{contactDetails.address}</p>
             </div>
           </div>
@@ -37,13 +37,13 @@ const Footer: React.FC = () => {
 
         {/* Column 2: Navigation Links */}
         <div className="space-y-6 m-auto">
-          <h3 className="font-bold text-lg text-yellow-400 mb-2">LINKS</h3>
+          <h3 className="font-bold text-lg text-[#FF6A00] mb-2">LINKS</h3>
           <nav className="flex flex-col items-center md:items-start space-y-2">
             {navigationLinks.map((link, index) => (
               <Link
                 key={index}
                 href={link.href}
-                className="text-white/80 hover:text-yellow-400 transition text-sm"
+                className="text-white/80 hover:text-[#FF6A00] transition text-sm"
               >
                 {link.title}
               </Link>
@@ -53,24 +53,24 @@ const Footer: React.FC = () => {
 
         {/* Column 3: Contact Info */}
         <div className="space-y-6 m-auto">
-          <h3 className="font-bold text-lg text-yellow-400 mb-2">CALL US</h3>
+          <h3 className="font-bold text-lg text-[#FF6A00] mb-2">CALL US</h3>
 
           {/* Phone */}
           <div className="flex items-center justify-center md:justify-start space-x-4 group">
-            <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center group-hover:bg-yellow-500/30 transition">
-              <Phone className="w-5 h-5 text-yellow-400" />
+            <div className="w-10 h-10 bg-[#FF6A00]/20 rounded-full flex items-center justify-center group-hover:bg-[#FF6A00]/30 transition">
+              <Phone className="w-5 h-5 text-[#FF6A00]" />
             </div>
-            <a href={`tel:${contactDetails.phone}`} className="text-white hover:text-yellow-400 text-sm font-semibold">
+            <a href={`tel:${contactDetails.phone}`} className="text-white hover:text-[#FF6A00] text-sm font-semibold">
               {contactDetails.phone}
             </a>
           </div>
 
           {/* Email */}
           <div className="flex items-center justify-center md:justify-start space-x-4 group">
-            <div className="w-10 h-10 bg-yellow-500/20 rounded-full flex items-center justify-center group-hover:bg-yellow-500/30 transition">
-              <Mail className="w-5 h-5 text-yellow-400" />
+            <div className="w-10 h-10 bg-[#FF6A00]/20 rounded-full flex items-center justify-center group-hover:bg-[#FF6A00]/30 transition">
+              <Mail className="w-5 h-5 text-[#FF6A00]" />
             </div>
-            <a href={`mailto:${contactDetails.email}`} className="text-white hover:text-yellow-400 text-sm font-semibold">
+            <a href={`mailto:${contactDetails.email}`} className="text-white hover:text-[#FF6A00] text-sm font-semibold">
               {contactDetails.email}
             </a>
           </div>
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
               <a
                 key={index}
                 href={href}
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-yellow-500 hover:scale-110 transition"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#FF6A00] hover:scale-110 transition"
                 aria-label={label}
               >
                 <Icon className="w-5 h-5" />
@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
       <div className="border-t border-white/10 py-4">
         <div className="container mx-auto px-4 text-center text-sm text-white/60">
           © 2025 Embrace The Wind | Designed by{" "}
-          <a href="https://infinitydesignhub.com/" className="text-yellow-400 font-semibold">
+          <a href="https://infinitydesignhub.com/" className="text-[#FF6A00] font-semibold">
             Infinity Design Hub
           </a>
         </div>

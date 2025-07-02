@@ -96,7 +96,7 @@ const LifestyleSection: React.FC = () => {
             }`}
           >
             <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
-            <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
+            <div className="w-3 h-3 bg-[#FF6A00] rounded-full animate-pulse"></div>
             <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
           </div>
         </div>

@@ -34,7 +34,7 @@ export default function LocationPage() {
           </div>
           <div className="w-full h-[400px]">
             <img
-              src="/images/static-map.png"
+              src="/images/7.jpg"
               alt="Custom location map"
               className="w-full h-full object-cover rounded-md border-2 border-gray-200"
             />
@@ -52,12 +52,11 @@ export default function LocationPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {nearbyPlaces.map((place, index) => {
-              const Icon = place.icon as unknown;
+              // const Icon = place.icon as unknown;
               return (
                 <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300">
                   <CardHeader className="flex flex-col items-center">
-                    <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
-                      <Icon className="h-8 w-8 text-yellow-500" />
+                    <div className="w-16 h-16 bg-[#FF6A00] rounded-full flex items-center justify-center mb-4">
                     </div>
                     <Chip color="warning" variant="bordered" className="mb-2">
                       {place.type}
@@ -85,7 +84,7 @@ export default function LocationPage() {
             {locationHighlights.map((highlight, index) => (
               <Card key={index} className="p-8 hover:shadow-lg transition-all duration-300">
                 <CardHeader className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mt-1">
+                  <div className="w-8 h-8 bg-[#FF6A00] rounded-full flex items-center justify-center mt-1">
                     <MapPin className="h-4 w-4 text-yellow-500" />
                   </div>
                   <h4 className="text-xl font-semibold text-navy">{highlight.title}</h4>
@@ -111,11 +110,11 @@ export default function LocationPage() {
 
               <div className="space-y-6">
                 {connectivityFeatures.map((feature, index) => {
-                  const Icon = feature.icon as unknown;
+                  // const Icon = feature.icon as unknown;
                   return (
                     <div key={index} className="flex items-start gap-4">
-                      <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mt-1">
-                        <Icon className="text-yellow-500 w-4 h-4" />
+                      <div className="w-8 h-8 bg-[#FF6A00] rounded-full flex items-center justify-center mt-1">
+                        {/* <Icon className="text-yellow-500 w-4 h-4" /> */}
                       </div>
                       <div>
                         <h4 className="font-semibold text-lg mb-1">{feature.title}</h4>
@@ -154,7 +153,7 @@ export default function LocationPage() {
             {commercialBrands.map((brand, index) => (
               <Card key={index} className="p-4 hover:shadow-lg transition-all duration-300">
                 <CardHeader className="flex flex-col items-center">
-                  <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-2">
+                  <div className="w-12 h-12 bg-[#FF6A00] rounded-lg flex items-center justify-center mb-2">
                     <ShoppingBag className="h-6 w-6 text-yellow-500" />
                   </div>
                   <h4 className="font-semibold text-navy text-sm">{brand}</h4>

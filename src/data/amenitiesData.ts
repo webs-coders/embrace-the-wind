@@ -1,4 +1,4 @@
-import { Waves, Users, Dumbbell, Building2, Home, TreePine, Shield, Car } from "lucide-react";
+import { Home, TreePine, Shield, Car, Users, Baby,ShieldCheck,MoveUpRight,Bus,Building2,Landmark,Footprints,Volleyball,Dumbbell,Umbrella,Bike,Tent,Puzzle,Sofa,Monitor,Waves, } from "lucide-react";
 
 export const mainAmenities = [
   {
@@ -9,7 +9,7 @@ export const mainAmenities = [
   },
   {
     icon: Users,
-    title: "Box Cricket Arena",
+    title: "Box BaseballBat Arena",
     description: "On-site cricket facility for recreational sports and fitness",
     category: "Sports",
   },
@@ -52,34 +52,27 @@ export const mainAmenities = [
 ];
 
 export const detailedAmenities = [
-  { id: "21", name: "Swimming Pool", description: "Main outdoor swimming pool with deck" },
-  { id: "31", name: "Indoor Swimming Pool", description: "With deck area and changing rooms" },
-  { id: "20", name: "Kids Pool", description: "Dedicated children's swimming area" },
-  { id: "32", name: "Gymnasium", description: "Fully equipped fitness center" },
-  { id: "17", name: "Outdoor Exercise Area", description: "Open-air fitness equipment" },
-  { id: "24", name: "Yoga Studio", description: "Dedicated space for yoga and meditation" },
-  { id: "36", name: "Banquet Hall", description: "For celebrations and events" },
-  { id: "38", name: "Indoor Theatre", description: "Private cinema experience" },
-  { id: "30", name: "Library & Work From Home Lounge", description: "Quiet workspace with books" },
-  { id: "29", name: "Indoor Game Zone", description: "Table tennis, carrom, and board games" },
-  { id: "26", name: "Multipurpose Play Court", description: "Badminton and volleyball court" },
-  { id: "16", name: "Children's Play Area", description: "Outdoor playground equipment" },
-  { id: "28", name: "Indoor Kids/Toddler's Play Area", description: "Safe indoor play zone" },
-  { id: "18", name: "Sand Pit", description: "Creative play area for children" },
-  { id: "19", name: "Play Mound", description: "Adventure climbing area" },
-  { id: "02", name: "Entry Plaza", description: "With trees and water feature" },
-  { id: "13", name: "Water Body With Sculpture", description: "Decorative water feature" },
-  { id: "07", name: "Sculpture Garden", description: "Rock sculptures with potted plants" },
-  { id: "15", name: "Mother's Sit Out Area", description: "Dedicated relaxation space" },
-  { id: "14", name: "Seating Pavilions", description: "With M.S Trellis for shade" },
-  { id: "39", name: "Jhula Plaza", description: "Traditional swing area" },
-  { id: "01", name: "Security Cabin", description: "24x7 security monitoring" },
-  { id: "05", name: "Pickup/Drop Off Zone", description: "With benches and M.S Trellis" },
-  { id: "51", name: "Drivers Waiting Area", description: "Comfortable waiting space" },
-  { id: "35", name: "Society Store", description: "Convenience shopping" },
-  { id: "52", name: "Society Office", description: "Administrative services" },
-  { id: "42", name: "Cycle Parking Zones", description: "Dedicated bicycle storage" },
+  { icon: Users, name: "Mother's Hangout Area", description: "Relaxed seating area for mothers to unwind." },
+  { icon: Baby, name: "Kids Play Area", description: "Outdoor play zone for children." },
+  // { icon: TennisRacket, name: "Badminton Court", description: "Outdoor badminton court for games." },
+  { icon: ShieldCheck, name: "24 x 7 Security", description: "Round-the-clock security services." },
+  { icon: MoveUpRight, name: "Separate Ramp Entry For In & Out", description: "Dedicated vehicle entry and exit ramps." },
+  { icon: Bus, name: "Drop Off Zone", description: "Designated pick-up and drop-off zone." },
+  { icon: Building2, name: "Security Cabin", description: "Onsite security control room." },
+  { icon: Landmark, name: "Gazebo", description: "Relaxation gazebo for gatherings." },
+  { icon: Footprints, name: "Walkway", description: "Walking path through landscaped areas." },
+  { icon: Volleyball, name: "Volleyball Court", description: "Outdoor volleyball court for residents." },
+  { icon: Dumbbell, name: "Gym Area", description: "Modern fitness gym with equipment." },
+  { icon: Umbrella, name: "Swimming Pool Deck", description: "Spacious deck area around the pool." },
+  { icon: Bike, name: "Open Gym", description: "Outdoor gym with workout stations." },
+  { icon: Tent, name: "Multipurpose Hall", description: "Hall for community events and celebrations." },
+  { icon: Puzzle, name: "Indoor Games", description: "Indoor games area for recreation." },
+  // { icon: BaseballBat, name: "Box Cricket", description: "Mini cricket pitch for short games." },
+  { icon: Sofa, name: "Lounge", description: "Comfortable lounge area for socializing." },
+  { icon: Monitor, name: "CCTV Room", description: "24x7 security camera monitoring room." },
+  { icon: Waves, name: "Indoor Swimming Pool", description: "Covered indoor swimming pool for all-weather use." },
 ];
+
 
 export const landscapeFeatures = [
   "Highest distance between 2 blocks for maximum privacy",
