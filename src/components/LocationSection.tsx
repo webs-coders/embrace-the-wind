@@ -37,7 +37,7 @@ const LocationSection: React.FC = () => {
           Embrace the Best <span className="text-gold-400">Location</span> in Town
         </h2>
         <p className="text-white/80 mt-4 leading-relaxed">
-          Situated at a premium spot in Gandhinagar with unbeatable access to all essentials.
+          At the Center of Everything. Minutes from Everywhere.
         </p>
       </div>
 

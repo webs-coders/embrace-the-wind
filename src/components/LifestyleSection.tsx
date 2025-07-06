@@ -59,7 +59,7 @@ const LifestyleSection: React.FC = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           <h2
-            className={`font-playfair text-4xl md:text-6xl lg:text-7xl font-bold text-slate-800 mb-6 leading-tight transition-all duration-1000 ${
+            className={`font-playfair text-4xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-6 leading-tight transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
