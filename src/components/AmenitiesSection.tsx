@@ -13,45 +13,57 @@ const AmenitiesSection: React.FC = () => {
   const amenities = [
     {
       icon: Waves,
-      title: 'Rooftop',
-      subtitle: 'Swimming Pool',
-      description: 'Luxurious infinity pool with panoramic city views'
+      subtitle:'',
+      title: 'Infinity Edge Rooftop Pool',
+      description: 'Two stunning swimming pools designed for relaxation and elevated living.'
     },
     {
       icon: Dumbbell,
-      title: 'Fitness Studio',
+      title: 'Yoga & Wellness Pavilion',
       subtitle: '',
-      description: 'State-of-the-art equipment and personal training'
+      description: 'Dedicated studio for yoga and meditation within the landscaped amenity zone.'
     },
     {
       icon: Users,
-      title: 'Party Hall',
+      title: 'Fitness Studio',
       subtitle: '',
-      description: 'Elegant venue for celebrations and gatherings'
+      description: 'A well-equipped gymnasium for strength, cardio, and functional training.'
     },
     {
       icon: Gamepad2,
-      title: 'Indoor Games',
-      subtitle: 'Room',
-      description: 'Entertainment zone with various indoor activities'
+      title: 'Banquet Hall',
+      subtitle: '',
+      description: 'Spacious indoor venue ideal for celebrations, gatherings, and private events.'
     },
     {
       icon: Home,
-      title: 'Party Terrace',
+      title: 'Indoor Theatre',
       subtitle: '',
-      description: 'Open-air space perfect for outdoor events'
+      description: 'On-site movie screening room offering cinema-style entertainment.'
     },
     {
       icon: Lotus,
-      title: 'Yoga/Meditation',
+      title: 'Indoor Games Zone',
       subtitle: '',
-      description: 'Peaceful sanctuary for wellness and mindfulness'
+      description: 'Spaces featuring activities for all ages—carrom, table tennis, and more.'
     },
     {
       icon: Baby,
-      title: "Children's Play",
-      subtitle: 'Area',
-      description: 'Safe and fun playground for kids'
+      title: "Children’s Play Area",
+      subtitle: '',
+      description: 'Thoughtfully designed zones for toddlers and kids to play safely and freely.'
+    },
+     {
+      icon: Lotus,
+      title: 'Sky Lounge / Party Terrace',
+      subtitle: '',
+      description: 'Open-air rooftop spaces ideal for social gatherings and tranquil evenings.'
+    },
+    {
+      icon: Baby,
+      title: "Box Cricket Arena",
+      subtitle: '',
+      description: ' A unique feature—compact cricket arena for residents to enjoy casual matches.'
     }
   ];
 

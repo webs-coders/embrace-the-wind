@@ -87,14 +87,14 @@ const OverviewSection: React.FC = () => {
             {/* Main Heading */}
             <div>
               <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
-                Bringing finesse to homes
-                <span className="block text-gold-600">& lifestyles</span>
+                Elegance at Every Corner!  World-Class 
+                <span className="block text-gold-600">lifestyles!</span>
               </h2>
             </div>
 
             {/* Description */}
             <p className="text-lg text-slate-600 leading-relaxed">
-              Live the elite life in 3 & 4BHK homes with triple height balconies.
+              Elite 3 & 4 BHK residences with personal patios, 10.25 ft ceilings, and panoramic balconies.
             </p>
 
             {/* Stats */}

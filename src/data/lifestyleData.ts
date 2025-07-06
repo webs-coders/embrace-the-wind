@@ -1,8 +1,8 @@
 // src/data/lifestyleData.ts
 export const lifestyleContent = {
-  heading: "Thrive in stylish",
-  highlight: "Embrace The Wind",
-  subtext: "Live the elite life in 4BHK homes with triple height balconies.",
+  heading: "You Deserve More Than a Home!",
+  highlight: "You Deserve a Landmark of Luxury!",
+  subtext: "",
   buttonLabel: "ENQUIRE NOW",
 };
 
