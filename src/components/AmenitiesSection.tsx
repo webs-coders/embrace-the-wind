@@ -7,7 +7,6 @@ import { Droplets,
   Joystick,
   Baby,
   Sunset,
-  PartyPopper,
   ShieldHalf } from 'lucide-react';
 
 
