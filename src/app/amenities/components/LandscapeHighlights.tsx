@@ -7,7 +7,7 @@ const LandscapeHighlights = () => {
     <section className="py-20 bg-slate-800 text-white">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-          Landscape Design Highlights
+          Breathe in Beauty. Walk Through Wonder.
         </h2>
 
         <div className="flex justify-between items-center">

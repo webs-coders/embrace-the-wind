@@ -1,5 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Waves, Dumbbell, Users, Gamepad2, Home, Bot as Lotus, Baby } from 'lucide-react';
+import { Droplets,
+  HeartHandshake,
+  Dumbbell,
+  GlassWater,
+  Video,
+  Joystick,
+  Baby,
+  Sunset,
+  ShieldHalf } from 'lucide-react';
+
 
 const AmenitiesSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -12,37 +21,37 @@ const AmenitiesSection: React.FC = () => {
 
   const amenities = [
     {
-      icon: Waves,
+      icon: Droplets,
       subtitle:'',
       title: 'Infinity Edge Rooftop Pool',
       description: 'Two stunning swimming pools designed for relaxation and elevated living.'
     },
     {
-      icon: Dumbbell,
+      icon: HeartHandshake,
       title: 'Yoga & Wellness Pavilion',
       subtitle: '',
       description: 'Dedicated studio for yoga and meditation within the landscaped amenity zone.'
     },
     {
-      icon: Users,
+      icon: Dumbbell,
       title: 'Fitness Studio',
       subtitle: '',
       description: 'A well-equipped gymnasium for strength, cardio, and functional training.'
     },
     {
-      icon: Gamepad2,
+      icon: GlassWater,
       title: 'Banquet Hall',
       subtitle: '',
       description: 'Spacious indoor venue ideal for celebrations, gatherings, and private events.'
     },
     {
-      icon: Home,
+      icon: Video,
       title: 'Indoor Theatre',
       subtitle: '',
       description: 'On-site movie screening room offering cinema-style entertainment.'
     },
     {
-      icon: Lotus,
+      icon: Joystick,
       title: 'Indoor Games Zone',
       subtitle: '',
       description: 'Spaces featuring activities for all ages—carrom, table tennis, and more.'
@@ -54,13 +63,13 @@ const AmenitiesSection: React.FC = () => {
       description: 'Thoughtfully designed zones for toddlers and kids to play safely and freely.'
     },
      {
-      icon: Lotus,
+      icon: Sunset,
       title: 'Sky Lounge / Party Terrace',
       subtitle: '',
       description: 'Open-air rooftop spaces ideal for social gatherings and tranquil evenings.'
     },
     {
-      icon: Baby,
+      icon: ShieldHalf,
       title: "Box Cricket Arena",
       subtitle: '',
       description: ' A unique feature—compact cricket arena for residents to enjoy casual matches.'
@@ -118,7 +127,7 @@ const AmenitiesSection: React.FC = () => {
           <div className="space-y-12">
             {/* Section Title */}
             <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-gold-400 mb-4">
+              <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-gold-400 mb-4">
                 Amenities
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-gold-400 to-gold-600"></div>
@@ -164,7 +173,7 @@ const AmenitiesSection: React.FC = () => {
           {/* Right Side - Enquiry Form */}
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-2xl">
-              <h3 className="font-playfair text-3xl lg:text-4xl font-bold text-slate-800 mb-8">
+              <h3 className="font-playfair text-2xl lg:text-3xl font-bold text-slate-800 mb-8">
                 Enquire
               </h3>
               
