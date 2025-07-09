@@ -58,16 +58,16 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center min-h-screen px-4 container mx-auto">
         <div className="max-w-4xl mx-auto space-y-6 transition-opacity duration-1000 ease-in-out">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white !leading-[1.3] ">
             {slide.title.split(' ').slice(0, -1).join(' ')}{' '}
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A00] to-[#FF8C00]">
               {slide.title.split(' ').slice(-1)[0]}
             </span>
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-white/90 font-light">
+          <p className="text-lg md:text-xl lg:text-xl text-white/90 font-light">
             {slide.subtitle}
           </p>
-          <button className="group relative px-8 py-4 border-2 border-white text-white text-lg font-medium uppercase tracking-wider transition-all duration-500 hover:bg-white hover:text-[#1A1A1A] hover:scale-105 hover:shadow-xl">
+          <button className="group relative px-6 py-3 border-2 border-white text-white text-md font-medium uppercase tracking-wider transition-all duration-500 hover:bg-white hover:text-[#1A1A1A] hover:scale-105 hover:shadow-xl">
             <span className="relative z-10">Explore Now</span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#FF6A00] to-[#FF8C00] opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 rounded" />
           </button>

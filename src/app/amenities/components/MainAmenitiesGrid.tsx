@@ -8,7 +8,7 @@ const MainAmenitiesGrid = () => {
     <section className="py-20 bg-[url('/images/overview-bg.jpg')] bg-cover bg-center">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-800">Wellness, Fitness & Fun</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-slate-800">A Lifestyle Crafted Around You</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {mainAmenities.map((item, index) => (

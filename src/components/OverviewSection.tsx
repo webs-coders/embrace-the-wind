@@ -86,7 +86,7 @@ const OverviewSection: React.FC = () => {
 
             {/* Main Heading */}
             <div>
-              <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
+              <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 leading-tight">
                 Elegance at Every Corner!  World-Class 
                 <span className="block text-gold-600">lifestyles!</span>
               </h2>

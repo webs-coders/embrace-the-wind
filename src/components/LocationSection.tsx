@@ -33,7 +33,7 @@ const LocationSection: React.FC = () => {
         <span className="bg-gold-100 text-gold-700 px-5 py-2 rounded-full text-sm font-semibold uppercase tracking-wider">
           Location Advantage
         </span>
-        <h2 className="text-4xl md:text-5xl font-extrabold mt-6 font-playfair">
+        <h2 className="text-3xl md:text-4xl font-extrabold mt-6 font-playfair">
           Embrace the Best <span className="text-gold-400">Location</span> in Town
         </h2>
         <p className="text-white/80 mt-4 leading-relaxed">
