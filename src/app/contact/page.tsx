@@ -12,8 +12,8 @@ export default function ContactUsPage() {
       <Header />
       <section className="relative h-[80vh] w-full bg-cover bg-center bg-[url('/images/innerbanner-contact.jpg')]">
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-white text-5xl md:text-6xl font-bold">
-            Contact
+          <h1 className="text-white text-3xl md:text-4xl font-bold">
+            Get in Touch with Embrace The Wind
           </h1>
         </div>
       </section>
