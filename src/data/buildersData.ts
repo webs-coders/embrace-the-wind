@@ -54,5 +54,5 @@ export const architect: ArchitectData = {
   description: "With over 300 thoughtfully realized projects, Mansi Shah stands as one of Gujarat\u2019s most respected voices in contemporary architecture. As the founder of Mansi Shah Architects (MSA), her philosophy goes beyond structure\u2014focusing on how people live, feel, and connect with their environment.",
   description1: "Known for her multidisciplinary approach and intuitive design language, she brings light, air, and soul into every space\u2014blending timeless elegance with everyday practicality. Her work embraces human-centric living, creating homes that aren\u2019t just built\u2014but truly felt.",
   caption: "Built with Heart. Designed for Life.",
-  title: undefined
+  title: "Architect: Mansi Shah"
 };
