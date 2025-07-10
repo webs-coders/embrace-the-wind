@@ -7,6 +7,7 @@ import AmenitiesGallery from "@/components/AmenitiesGallery";
 import AmenitiesHero from "./components/AmenitiesHero";
 // import MainAmenitiesGrid from "./components/MainAmenitiesGrid";
 import DetailedAmenitiesList from "./components/DetailedAmenitiesList";
+import LandscapeSection from "./components/LandscapeSection";
 import LandscapeHighlights from "./components/LandscapeHighlights";
 
 export default function AmenitiesPage() {
@@ -18,6 +19,7 @@ export default function AmenitiesPage() {
         {/* <MainAmenitiesGrid /> */}
         <DetailedAmenitiesList />
       </div>
+      <LandscapeSection/>
       <LandscapeHighlights />
       <AmenitiesGallery />
       <Footer />

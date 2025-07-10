@@ -2,41 +2,50 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 const ContactDetails = () => {
   return (
-  <div className="bg-white-100 p-6 rounded-lg shadow-md">
-      <h2 className="text-3xl font-semibold mb-6 text-gray-800 border-l-4 border-orange-500 pl-4">
+    <div className="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-gray-200 max-w-3xl mx-auto">
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#B36930] mb-8 border-l-4 border-[#B36930] pl-4">
         Contact Us
       </h2>
 
-      <div className="space-y-6 text-gray-700">
-        <div className="flex items-start gap-4">
-          <MapPin className="text-orange-500 mt-1" />
+      <div className="space-y-8 text-gray-800">
+        {/* Address */}
+        <div className="flex items-start gap-5">
+          <div className="bg-[#FFF3E9] text-[#B36930] p-3 rounded-xl">
+            <MapPin className="w-6 h-6" />
+          </div>
           <div>
-            <p className="font-semibold">Address:</p>
-            <p>
-              Embrace The Wind, B/h McDonald's On S.G. Highway, Sargasan Cross
-              Road, Sargasan, Gandhinagar - 382421.
+            <p className="text-lg font-medium">Address</p>
+            <p className="text-gray-600 leading-relaxed">
+              Embrace The Wind, B/h McDonald&apos;s on S.G. Highway, Sargasan Cross Road,<br />
+              Sargasan, Gandhinagar – 382421.
             </p>
           </div>
         </div>
 
-        <div className="flex items-start gap-4">
-          <Phone className="text-orange-500 mt-1" />
+        {/* Phone */}
+        <div className="flex items-start gap-5">
+          <div className="bg-[#FFF3E9] text-[#B36930] p-3 rounded-xl">
+            <Phone className="w-6 h-6" />
+          </div>
           <div>
-            <p className="font-semibold">Phone:</p>
-            <p>+91 9797976577</p>
+            <p className="text-lg font-medium">Phone</p>
+            <p className="text-gray-600">+91 9797976577</p>
           </div>
         </div>
 
-        <div className="flex items-start gap-4">
-          <Mail className="text-orange-500 mt-1" />
+        {/* Email */}
+        <div className="flex items-start gap-5">
+          <div className="bg-[#FFF3E9] text-[#B36930] p-3 rounded-xl">
+            <Mail className="w-6 h-6" />
+          </div>
           <div>
-            <p className="font-semibold">Email:</p>
-            <p>Embracethewind33@gmail.com</p>
+            <p className="text-lg font-medium">Email</p>
+            <p className="text-gray-600">Embracethewind33@gmail.com</p>
           </div>
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default ContactDetails;
