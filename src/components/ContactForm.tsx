@@ -6,6 +6,7 @@ const ContactForm = () => {
     name: '',
     phone: '',
     email: '',
+    message: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +21,7 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="bg-gray-100 p-6 rounded-lg shadow-md">
-      <h3 className="text-xl font-semibold mb-4">Enquire</h3>
+      <h3 className="text-xl font-semibold mb-4">Send Us a Quick Message</h3>
       <input
         type="text"
         name="name"
@@ -45,12 +46,21 @@ const ContactForm = () => {
         onChange={handleChange}
         className="w-full p-2 mb-3 border border-gray-300 rounded"
       />
+      <input
+        type="text"
+        name="message "
+        placeholder="Drop your message"
+        value={formData.message }
+        onChange={handleChange}
+        className="w-full p-2 mb-3 border border-gray-300 rounded"
+      />
       <button
         type="submit"
         className="w-full bg-black text-white py-2 rounded hover:bg-gray-800"
       >
-        Submit
+        Submit Enquiry
       </button>
+      <p className="w-full py-2 rounded">Your information is safe with us.</p>
     </form>
   );
 };
