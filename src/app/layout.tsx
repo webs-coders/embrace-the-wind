@@ -2,6 +2,8 @@
 import React from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import GetInTouchModal from "@/components/GetInTouchModal";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -106,7 +108,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} antialiased`}>
+        {children}
+        <GetInTouchModal />
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }
