@@ -11,6 +11,7 @@ import LifestyleSection from "@/components/LifestyleSection";
 import Footer from "@/components/Footer";
 import SocialSidebar from "@/components/SocialSidebar";
 import "./globals.css";
+
 export default function HomePage() {
   return (
     <>
