@@ -161,7 +161,7 @@ const AmenitiesSection: React.FC = () => {
                     )}
                     
                     {/* Description - Hidden by default, shown on hover */}
-                    <p className="text-sm text-white/60 mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <p className="text-sm text-white/90 mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                       {amenity.description}
                     </p>
                   </div>

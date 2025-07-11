@@ -22,7 +22,7 @@ const BuilderCard = ({
         dark ? "bg-zinc-900 text-white" : "bg-white text-black"
       }`}
     >
-      <div className="flex items-center justify-center md:justify-start w-full md:w-1/3">
+      <div className="flex items-center justify-center md:justify-center w-full md:w-1/3">
         <Image
           src={logo}
           alt={name}
