@@ -24,14 +24,15 @@ export const submitToGoogleSheets = async (formData: ContactFormData): Promise<b
       })
     };
 
-    const response = await fetch(GOOGLE_SCRIPT_URL, {
+    await fetch(GOOGLE_SCRIPT_URL, {
       method: 'POST',
-      mode: 'no-cors', // Required for Google Apps Script
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(dataWithTimestamp)
     });
+
 
     // Note: With no-cors mode, we can't read the response
     // We'll assume success if no error is thrown
