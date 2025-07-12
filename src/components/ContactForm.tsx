@@ -42,7 +42,7 @@ const ContactForm = () => {
         <div className="text-center py-12 animate-fade-in">
           <h4 className="text-2xl font-semibold text-green-700 mb-2">🎉 Thank you!</h4>
           <p className="text-gray-700 text-sm mb-6">
-            We've received your message and will get back to you shortly.
+            We&apos;ve received your message and will get back to you shortly.
           </p>
           <button
             type="button"
