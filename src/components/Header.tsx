@@ -43,7 +43,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between py-2 lg:py-3">
         <Link href="/">
             <Image
-              src={isScrolled ? "/Logo-3-&-$.png" : "/Logo-3-&-4-white.png"}
+              src={isScrolled ? "/New-Logo.png" : "/New-White-Logo.png"}
               alt="Logo"
               width={100}
               height={100}
