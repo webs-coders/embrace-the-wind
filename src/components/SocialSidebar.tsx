@@ -1,22 +1,20 @@
-import React from 'react';
-import { Facebook, Instagram, Phone } from 'lucide-react';
+'use client';
+import React from "react";
+import { socialMediaLinks, callButton } from "@/data/socialLinks";
 
 const SocialSidebar: React.FC = () => {
-  const socialLinks = [
-    { icon: Facebook, href: 'https://www.facebook.com/profile.php?viewas=100000686899395&id=61577706320289', label: 'Facebook' },
-    { icon: Instagram, href: 'https://www.instagram.com/embracethewind_/', label: 'Instagram' },
-  ];
-
   return (
     <>
       {/* Social Media Icons - Left Side */}
       <div className="fixed left-6 top-1/2 transform -translate-y-1/2 z-40 hidden lg:flex flex-col space-y-4">
-        {socialLinks.map(({ icon: Icon, href, label }) => (
+        {socialMediaLinks.map(({ icon: Icon, href, label }) => (
           <a
             key={label}
             href={href}
             className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-gold-500 hover:scale-110 transition-all duration-300 group"
             aria-label={label}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
           </a>
@@ -26,11 +24,11 @@ const SocialSidebar: React.FC = () => {
       {/* Phone Call Button - Bottom Left */}
       <div className="fixed bottom-6 left-6 z-40">
         <a
-          href="tel:+919797976577"
+          href={callButton.href}
           className="w-14 h-14 bg-gradient-to-r from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-pulse"
-          aria-label="Call us"
+          aria-label={callButton.label}
         >
-          <Phone className="w-6 h-6" />
+          <callButton.icon className="w-6 h-6" />
         </a>
       </div>
     </>

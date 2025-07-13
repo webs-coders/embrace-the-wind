@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import BrochureFormModal from "./BrochureFormModal";
+import BrochureFormModal from "@/components/BrochureFormModal";
 
 const BrochureCTA = () => {
   const [isOpen, setIsOpen] = useState(false);

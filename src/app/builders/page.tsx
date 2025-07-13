@@ -8,17 +8,27 @@ import BuildersSection from "@/components/BuildersSection";
 
 export default function BuildersPage() {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black flex flex-col">
       <Header />
-      <section className="relative h-[80vh] w-full bg-cover bg-center bg-[url('/images/EMBRACETHEWIND4.jpg')]">
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-white text-5xl md:text-6xl font-bold">
+
+      {/* Hero Section */}
+      <section className="relative w-full h-[70vh] sm:h-[75vh] md:h-[80vh] bg-cover bg-center bg-[url('/images/EMBRACETHEWIND4.jpg')]">
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center px-4 text-center">
+          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-lg">
             Two Legacies. One Vision
           </h1>
         </div>
       </section>
-      <BuildersSection />
-      <AmenitiesGallery />
+
+      {/* Builders Section */}
+      <main className="flex-1">
+        <section className="px-4 sm:px-6 lg:px-8 py-16">
+          <BuildersSection />
+        </section>
+        <AmenitiesGallery />
+      </main>
+
+      {/* Footer & Sidebar */}
       <Footer />
       <SocialSidebar />
     </div>

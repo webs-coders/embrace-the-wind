@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
-import { amenitySlides, AmenitySlide } from "@/data/amenitieData";
+import { amenitySlides, AmenitySlide } from "@/data/AmenitiesGallery_slider";
 
 const AmenitiesGallery: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
