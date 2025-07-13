@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import { floatingImages, lifestyleContent } from '@/data/lifestyleData';
+import { useRouter } from 'next/navigation';
 
 const LifestyleSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -22,7 +23,10 @@ const LifestyleSection: React.FC = () => {
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
-
+const router = useRouter();
+  const handleClick = () => {
+    router.push('/contact');
+  };
   return (
     <section
       ref={sectionRef}
@@ -78,8 +82,10 @@ const LifestyleSection: React.FC = () => {
           </p>
 
           <button
+            onClick={handleClick}
             className={`group relative bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-8 py-4 rounded-full font-semibold text-lg tracking-wide transition-all duration-500 hover:from-yellow-600 hover:to-yellow-700 hover:scale-105 hover:shadow-2xl ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+
             }`}
           >
             <span className="relative z-10 flex items-center space-x-2">
