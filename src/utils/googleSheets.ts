@@ -3,14 +3,15 @@ export interface ContactFormData {
   email: string;
   phone: string;
   message: string;
+  sheetName?: string; // ✅ Optional sheet/tab name
 }
+
 
 // You'll need to replace this URL with your Google Apps Script Web App URL
 const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL as string;
 
 export const submitToGoogleSheets = async (formData: ContactFormData): Promise<boolean> => {
   try {
-    // Add timestamp to the data
     const dataWithTimestamp = {
       ...formData,
       timestamp: new Date().toLocaleString('en-IN', {
@@ -30,18 +31,17 @@ export const submitToGoogleSheets = async (formData: ContactFormData): Promise<b
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(dataWithTimestamp)
+      body: JSON.stringify(dataWithTimestamp),
     });
 
-
-    // Note: With no-cors mode, we can't read the response
-    // We'll assume success if no error is thrown
     return true;
   } catch (error) {
     console.error('Error submitting to Google Sheets:', error);
     return false;
   }
 };
+
+
 
 // Fallback function to store data locally if Google Sheets fails
 export const storeDataLocally = (formData: ContactFormData) => {

@@ -11,7 +11,7 @@ const ContactForm = () => {
     status,
     errors,
     resetForm,
-  } = useContactForm();
+  } = useContactForm("ContactForm");
 
   const [submitted, setSubmitted] = useState(false);
 
@@ -87,8 +87,7 @@ const ContactForm = () => {
           />
           {errors.email && <p className="text-red-600 text-sm mb-2">{errors.email}</p>}
 
-          <input
-            type="text"
+          <textarea
             name="message"
             placeholder="Drop your message"
             value={formData.message}

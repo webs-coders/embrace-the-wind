@@ -8,7 +8,7 @@ const validateEmail = (email: string) =>
 const validatePhone = (phone: string) =>
   /^[6-9]\d{9}$/.test(phone); // Indian 10-digit mobile number starting from 6-9
 
-export const useContactForm = (onSuccess?: () => void) => {
+export const useContactForm = (sheetName: string, onSuccess?: () => void) => {
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     phone: '',
@@ -26,7 +26,7 @@ export const useContactForm = (onSuccess?: () => void) => {
     setErrors({});
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
     if (name === 'phone') {
@@ -63,31 +63,36 @@ export const useContactForm = (onSuccess?: () => void) => {
     return newErrors;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (
+    e: React.FormEvent,
+    options?: { silent?: boolean }
+  ): Promise<boolean> => {
     e.preventDefault();
 
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      return;
+      return false;
     }
 
     setIsSubmitting(true);
-    setStatus('');
+    if (!options?.silent) setStatus('');
 
-    const success = await submitToGoogleSheets(formData);
+    const success = await submitToGoogleSheets({ ...formData, sheetName });
 
     if (success) {
-      setStatus('Form submitted successfully!');
+      if (!options?.silent) setStatus('Form submitted successfully!');
       setFormData({ name: '', phone: '', email: '', message: '' });
       if (onSuccess) onSuccess();
     } else {
       storeDataLocally(formData);
-      setStatus('Submission failed. Saved locally.');
+      if (!options?.silent) setStatus('Submission failed. Saved locally.');
     }
 
     setIsSubmitting(false);
+    return success;
   };
+
 
   return {
     formData,
