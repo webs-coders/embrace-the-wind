@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       <div className="w-full h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600"></div>
 
       {/* Main Footer Grid */}
-      <div className="container mx-auto px-4 py-16 grid grid-cols-3">
+      <div className="container mx-auto px-4 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center lg:text-left">
         {/* Column 1: Project Info */}
         <div className="space-y-6 m-auto">
           <div>

@@ -95,13 +95,26 @@ export const detailedAmenities = [
 ];
 
 
-export const landscapeFeatures = [
-"Wide space between towers for more privacy and peace",
-"Calm water zones surrounded by greenery for quiet relaxation",
-"Shaded gazebos with plants for comfortable outdoor seating",
-"Balconies with rain showers and garden views for a spa-like feel",
-"Skybridge paths with beautiful views of the landscape",
-"Bonfire areas for cozy evenings with friends and family",
-"Stone walkways winding through green, peaceful spaces",
-"Raised garden beds with rich, thick planting for a lush look",
+export const landscapeFeatures: string[] = [
+  "Wide space between towers for more privacy and peace",
+  "Calm water zones surrounded by greenery for quiet relaxation",
+  "Shaded gazebos with plants for comfortable outdoor seating",
+  "Balconies with rain showers and garden views for a spa-like feel",
+  "Skybridge paths with beautiful views of the landscape",
+  "Bonfire areas for cozy evenings with friends and family",
+  "Stone walkways winding through green, peaceful spaces",
+  "Raised garden beds with rich, thick planting for a lush look",
+];
+
+export const landscapeImage = "/images/EMBRACETHEWIND1.jpg"; // relative path
+
+
+export const landscapeSectionImages = {
+  planImage: "/images/EMBRACETHEWIND1.jpg",
+  renderImage: "/images/EMBRACETHEWIND2.jpg",
+};
+
+export const landscapeDescription = [
+  "A nature-inspired haven for every generation.",
+  "From playful zones to peaceful gardens, it invites all ages to connect, unwind, and belong.",
 ];

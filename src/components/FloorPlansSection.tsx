@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Download, MapPin, Car, TreePine, Home, Shield } from "lucide-react";
-import { floorPlanData } from "../data/floorPlanData";
+import { floorPlanData } from "@/data/floorPlanData";
 
 const iconMap = {
   MapPin,
