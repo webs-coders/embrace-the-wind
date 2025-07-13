@@ -59,8 +59,8 @@ const Header = () => {
           </div>
 
           {/* CTA */}
-          <a
-            href="#contact-us"
+          <Link
+            href="/contact"
             className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               isScrolled
                 ? "bg-[#FF6A00] text-white hover:scale-105 shadow-md hover:bg-[#FF8C00]"
@@ -68,7 +68,7 @@ const Header = () => {
             }`}
           >
             Enquire Now
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
