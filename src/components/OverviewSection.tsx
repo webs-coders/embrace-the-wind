@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Building, Home, Download } from "lucide-react";
 import Image from "next/image";
+import BrochureFormModal from "./BrochureFormModal";
 
 const OverviewSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -131,8 +133,8 @@ const OverviewSection: React.FC = () => {
             </div>
 
             {/* CTA Button */}
-            <div>
-              <button className="group bg-slate-900 text-white px-8 py-4 rounded-lg font-semibold uppercase tracking-wider hover:bg-slate-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-3">
+            <div> 
+              <button onClick={() => setIsOpen(true)} className="group bg-slate-900 text-white px-8 py-4 rounded-lg font-semibold uppercase tracking-wider hover:bg-slate-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-3">
                 <Download className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 <span>Download Brochure</span>
               </button>
@@ -140,6 +142,7 @@ const OverviewSection: React.FC = () => {
           </div>
         </div>
       </div>
+      {isOpen && <BrochureFormModal onClose={() => setIsOpen(false)} />}
     </section>
   );
 };
