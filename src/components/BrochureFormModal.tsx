@@ -10,12 +10,9 @@ export default function BrochureFormModal({ onClose }: { onClose: () => void }) 
     handleChange,
     handleSubmit,
     isSubmitting,
-    status,
     errors,
-    resetForm,
   } = useContactForm("DownloadForm");
 
-  const [submitted, setSubmitted] = useState(false);
 
   const handleDownload = async (e: React.FormEvent) => {
   e.preventDefault();
