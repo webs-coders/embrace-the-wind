@@ -12,7 +12,7 @@ export default function LocationHighlights() {
           {locationHighlights.map((highlight, index) => (
             <Card key={index} className="hover:shadow-xl transition-all duration-300 p-6">
               <CardHeader className="flex items-center space-x-4">
-                <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-color-light-orange rounded-full flex items-center justify-center">
                   <MapPin className="h-5 w-5 text-white" />
                 </div>
                 <h4 className="text-xl font-semibold text-navy">{highlight.title}</h4>

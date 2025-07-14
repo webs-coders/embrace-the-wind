@@ -13,7 +13,7 @@ export default function CommercialSpaces() {
           {commercialBrands.map((brand, index) => (
             <Card key={index} className="hover:scale-105 transition-transform duration-300 p-4">
               <CardHeader className="flex flex-col items-center">
-                <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-2">
+                <div className="w-12 h-12 bg-color-light-orange rounded-lg flex items-center justify-center mb-2">
                   <ShoppingBag className="h-6 w-6 text-white" />
                 </div>
                 <h4 className="text-sm font-medium text-navy">{brand}</h4>

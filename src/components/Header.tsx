@@ -16,10 +16,10 @@ const Header = () => {
   }, []);
 
   const linkColor = isScrolled
-    ? "text-[#1A1A1A] hover:text-[#FF6A00]"
-    : "text-white hover:text-[#FF8C00]";
+    ? "text-[#1A1A1A] hover:text-color-orange"
+    : "text-white hover:text-color-orange";
 
-  const underlineColor = isScrolled ? "bg-[#FF6A00]" : "bg-[#FF8C00]";
+  const underlineColor = isScrolled ? "bg-color-orange" : "bg-color-orange";
 
   return (
     <header
@@ -44,7 +44,7 @@ const Header = () => {
         <div className="hidden lg:flex items-center space-x-6">
           {/* Phone */}
           <div className="flex items-center space-x-2">
-            <Phone className="w-4 h-4 text-[#FF6A00]" />
+            <Phone className="w-4 h-4 text-color-orange" />
             <a href={contactInfo.phone.href} className={`text-sm font-medium ${linkColor}`}>
               {contactInfo.phone.label}
             </a>
@@ -52,7 +52,7 @@ const Header = () => {
 
           {/* Email */}
           <div className="flex items-center space-x-2">
-            <Mail className="w-4 h-4 text-[#FF6A00]" />
+            <Mail className="w-4 h-4 text-color-orange" />
             <a href={contactInfo.email.href} className={`text-sm font-medium ${linkColor}`}>
               {contactInfo.email.label}
             </a>
@@ -63,8 +63,8 @@ const Header = () => {
             href="/contact"
             className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
               isScrolled
-                ? "bg-[#FF6A00] text-white hover:scale-105 shadow-md hover:bg-[#FF8C00]"
-                : "bg-white/10 border border-white/30 text-white hover:bg-[#FF6A00]"
+                ? "bg-color-light-orange text-white hover:scale-105 shadow-md hover:bg-color-orange"
+                : "bg-white/10 border border-white/30 text-white hover:bg-color-orange"
             }`}
           >
             Enquire Now
@@ -113,7 +113,7 @@ const Header = () => {
                 key={label}
                 href={href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-[#1A1A1A] font-semibold hover:text-[#FF6A00]"
+                className="block text-[#1A1A1A] font-semibold hover:bg-color-orange"
               >
                 {label}
               </Link>

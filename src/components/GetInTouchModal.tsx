@@ -94,7 +94,7 @@ export default function GetInTouchModal() {
               <button
                 type="button"
                 onClick={handleNewSubmission}
-                className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition"
+                className="bg-color-orange text-white px-4 py-2 rounded hover:bg-orange-600 transition"
               >
                 Submit Another
               </button>
@@ -157,7 +157,7 @@ export default function GetInTouchModal() {
 
               <button
                 type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-lg font-medium"
+                className="w-full bg-color-light-orange hover:bg-color-orange text-white py-2 rounded-lg font-medium"
               >
                 Get a Call
               </button>

@@ -68,7 +68,7 @@ const router = useRouter();
             }`}
           >
             {lifestyleContent.heading}
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-800">
+            <span className="block text-transparent bg-clip-text bg-color-orange">
               {lifestyleContent.highlight}
             </span>
           </h2>
@@ -83,7 +83,7 @@ const router = useRouter();
 
           <button
             onClick={handleClick}
-            className={`group relative bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-8 py-4 rounded-full font-semibold text-lg tracking-wide transition-all duration-500 hover:from-yellow-600 hover:to-yellow-700 hover:scale-105 hover:shadow-2xl ${
+            className={`group relative bg-color-light-orange text-white px-8 py-4 rounded-full font-semibold text-lg tracking-wide transition-all duration-500 hover:from-yellow-600 hover:to-yellow-700 hover:scale-105 hover:shadow-2xl ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
 
             }`}
@@ -92,7 +92,7 @@ const router = useRouter();
               <span>{lifestyleContent.buttonLabel}</span>
               <Sparkles className="w-5 h-5 group-hover:animate-spin" />
             </span>
-            <div className="absolute inset-0 bg-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full" />
+            <div className="absolute inset-0 bg-color-orange opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full" />
           </button>
 
           {/* Decorative Divider */}

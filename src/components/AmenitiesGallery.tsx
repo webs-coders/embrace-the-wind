@@ -70,10 +70,10 @@ const AmenitiesGallery: React.FC = () => {
               <div className="absolute left-6 lg:left-16 top-1/2 -translate-y-1/2 max-w-lg space-y-4 text-white">
                 {/* Number and Icon */}
                 <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 rounded-full bg-yellow-400 text-black flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-color-light-orange text-black flex items-center justify-center">
                     <Play size={18} />
                   </div>
-                  <span className="text-[#FF6A00] font-bold text-lg">
+                  <span className="text-color-orange font-bold text-lg">
                     {slide.id}/0{amenitySlides.length}
                   </span>
                 </div>
@@ -126,7 +126,7 @@ const AmenitiesGallery: React.FC = () => {
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide
-                    ? "bg-yellow-400 scale-125"
+                    ? "bg-color-orange scale-125"
                     : "bg-white/40 hover:bg-white/60"
                 }`}
               />
@@ -157,7 +157,7 @@ const AmenitiesGallery: React.FC = () => {
               <div
                 className={`absolute inset-0 ${
                   index === currentSlide
-                    ? "bg-yellow-400/20"
+                    ? "bg-color-light-orange/80"
                     : "bg-black/40 group-hover:bg-black/30"
                 } transition`}
               ></div>

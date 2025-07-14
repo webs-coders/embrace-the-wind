@@ -39,11 +39,11 @@ const LocationSection: React.FC = () => {
     >
       {/* Title */}
       <div className={`max-w-4xl mx-auto text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-        <span className="inline-block px-4 py-1 rounded-full bg-gold-100 text-gold-700 text-xs font-semibold uppercase">
+        <span className="inline-block px-4 py-1 rounded-full bg-gold-100 text-color-orange text-xs font-semibold uppercase">
           Location Advantage
         </span>
         <h2 className="mt-6 text-4xl md:text-5xl font-playfair font-extrabold leading-tight">
-          Discover a <span className="text-gold-400">Premium Location</span>
+          Discover a <span className="text-color-light-orange">Premium Location</span>
         </h2>
         <p className="mt-4 text-white/70 text-lg">
           At the center of progress. Minutes from business, healthcare, shopping & more.
@@ -82,7 +82,7 @@ const LocationSection: React.FC = () => {
         <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`}>
           {/* Connectivity */}
           <div className="mb-10">
-            <h3 className="text-2xl font-bold text-gold-400 font-playfair mb-4">
+            <h3 className="text-2xl font-bold text-color-light-orange font-playfair mb-4">
               Connectivity Highlights
             </h3>
             <div className="space-y-4">
@@ -91,7 +91,7 @@ const LocationSection: React.FC = () => {
                 return (
                   <div key={idx} className="flex gap-4 p-4 bg-slate-800/40 rounded-xl hover:bg-slate-800/60 transition">
                     <div className="p-3 bg-gold-500/10 rounded-full">
-                      <Icon className="w-5 h-5 text-gold-400" />
+                      <Icon className="w-5 h-5 text-color-light-orange" />
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">{feature.title}</h4>
@@ -107,7 +107,7 @@ const LocationSection: React.FC = () => {
 
           {/* Nearby */}
           <div>
-            <h3 className="text-2xl font-bold text-gold-400 font-playfair mb-4">
+            <h3 className="text-2xl font-bold text-color-light-orange font-playfair mb-4">
               Nearby Essentials
             </h3>
             <div className="grid sm:grid-cols-2 gap-4">
@@ -117,11 +117,11 @@ const LocationSection: React.FC = () => {
                   <div key={idx} className="flex items-center justify-between bg-slate-800/30 p-4 rounded-xl hover:bg-slate-800/50 transition group">
                     <div className="flex items-center gap-3">
                       <div className="p-2 bg-gold-500/10 rounded-full group-hover:bg-gold-500/20">
-                        <Icon className="w-4 h-4 text-gold-400" />
+                        <Icon className="w-4 h-4 text-color-light-orange" />
                       </div>
                       <span className="text-white/90 text-sm">{place.name}</span>
                     </div>
-                    <span className="text-gold-400 text-xs">{place.distance}</span>
+                    <span className="text-color-light-orange text-xs">{place.distance}</span>
                   </div>
                 );
               })}

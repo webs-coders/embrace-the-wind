@@ -18,8 +18,8 @@ const DetailedAmenitiesSection: React.FC = () => {
                 key={index}
                 className="flex flex-col items-center text-center p-6 rounded-2xl bg-white shadow-md hover:shadow-lg transition duration-300"
               >
-                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-orange-100 mb-4">
-                  <Icon className="w-6 h-6 text-orange-600" />
+                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-color-light-orange mb-4">
+                  <Icon className="w-6 h-6 text-white" />
                 </div>
                 <h4 className="font-semibold text-lg text-slate-800 mb-2">
                   {item.name}

@@ -35,8 +35,8 @@ const FloorPlansSection: React.FC = () => {
               onClick={() => setActiveTab(tab)}
               className={`whitespace-nowrap px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeTab.title === tab.title
-                  ? "bg-yellow-400 text-slate-900 shadow-md"
-                  : "bg-white text-slate-700 border border-slate-300 hover:bg-[#FF6A00]"
+                  ? "bg-color-light-orange text-white shadow-md"
+                  : "bg-white text-slate-700 border border-slate-300 hover:bg-color-light-orange hover:text-white"
               }`}
             >
               {tab.title}
@@ -56,8 +56,8 @@ const FloorPlansSection: React.FC = () => {
                   key={idx}
                   className="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition"
                 >
-                  <div className="w-10 h-10 flex items-center justify-center bg-[#FF6A00] rounded-full">
-                    <Icon className="w-5 h-5 text-yellow-500" />
+                  <div className="w-10 h-10 flex items-center justify-center bg-color-light-orange rounded-full">
+                    <Icon className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-slate-700 text-sm">{item.label}</span>
                 </div>
@@ -89,7 +89,7 @@ const FloorPlansSection: React.FC = () => {
 
         {/* Download Button */}
         <div className="mt-10 text-center">
-          <button className="inline-flex items-center gap-2 bg-yellow-400 text-slate-900 font-semibold px-6 py-3 rounded-full shadow hover:bg-[#FF6A00] transition">
+          <button className="inline-flex items-center gap-2 bg-color-light-orange text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-color-orange transition">
             <Download size={18} />
             Download {activeTab.title}
           </button>

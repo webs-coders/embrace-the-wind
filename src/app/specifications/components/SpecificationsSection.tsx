@@ -18,13 +18,13 @@ export default function SpecificationsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl font-playfair font-bold text-center text-[#ff8c00] mb-20"
+            className="text-4xl font-playfair font-bold text-center text-color-orange mb-20"
           >
             Specifications
           </motion.h2>
 
           <div className="relative mx-auto max-w-6xl">
-            <div className="hidden lg:block absolute left-1/2 top-0 h-full border-l-2 border-[#ff8c00] z-0" />
+            <div className="hidden lg:block absolute left-1/2 top-0 h-full border-l-2 border-color-orange z-0" />
 
             <div className="flex flex-col items-center">
               {specificationsData.map((spec, index) => (

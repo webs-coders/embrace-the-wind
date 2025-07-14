@@ -15,7 +15,7 @@ const BrochureCTA = () => {
         </p>
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-white text-orange-600 px-8 py-3 rounded-full font-semibold hover:scale-105 transition-all duration-300 animate-pulse shadow-lg"
+          className="bg-white text-color-orange px-8 py-3 rounded-full font-semibold hover:scale-105 transition-all duration-300 animate-pulse shadow-lg"
         >
           📄 Download Brochure
         </button>
