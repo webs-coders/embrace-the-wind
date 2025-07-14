@@ -67,9 +67,9 @@ export default function GalleryPage() {
                   height={400}
                   className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="bg-gray-900 text-white text-sm px-4 py-2 text-center">
+                {/* <div className="bg-gray-900 text-white text-sm px-4 py-2 text-center">
                   {image.alt}
-                </div>
+                </div> */}
               </div>
             ))}
           </div>
