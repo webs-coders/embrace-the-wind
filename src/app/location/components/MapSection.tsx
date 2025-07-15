@@ -1,4 +1,6 @@
 "use client";
+
+import Image from "next/image";
 import GoogleMapEmbed from "@/components/GoogleMapEmbed";
 
 export default function MapSection() {
@@ -8,11 +10,14 @@ export default function MapSection() {
         <div className="rounded-2xl overflow-hidden shadow-xl">
           <GoogleMapEmbed />
         </div>
-        <div className="rounded-2xl overflow-hidden shadow-xl">
-          <img
+        <div className="rounded-2xl overflow-hidden shadow-xl relative w-full h-[400px]">
+          <Image
             src="/images/7.jpg"
             alt="Custom Map"
-            className="object-cover w-full h-full"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority
           />
         </div>
       </div>
