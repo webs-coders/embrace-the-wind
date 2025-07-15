@@ -11,7 +11,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           <div>
             <Image
-              src="/images/EMBRACETHEWIND3.jpg"
+              src="/ResizedImages/EMBRACE_THE_WIND_03.jpg"
               alt="Building Image"
               width={600}
               height={800}

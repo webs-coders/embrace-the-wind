@@ -1,21 +1,21 @@
 [
   {
-    "image": "./images/EMBRACETHEWIND1.jpg",
+    "image": "/ResizedImages/EMBRACE_THE_WIND_01.jpg",
     "title": "The One and Only Masterpiece at Sargasan",
     "subtitle": "Welcome to Embrace The Wind"
   },
   {
-    "image": "./images/EMBRACETHEWIND2.jpg",
+    "image": "/ResizedImages/EMBRACE_THE_WIND_02.jpg",
     "title": "20 Storeys. 5 Towers. One Icon.",
     "subtitle": "The only high-rise of its kind—luxury reimagined in every detail."
   },
   {
-    "image": "./images/EMBRACETHEWIND3.jpg",
+    "image": "/ResizedImages/EMBRACE_THE_WIND_03.jpg",
     "title": "Inspired By Wind",
     "subtitle": "Natural breeze and sunlight naturally touch every corner"
   },
   {
-    "image": "./images/EMBRACETHEWIND5.jpg",
+    "image": "/ResizedImages/EMBRACE_THE_WIND_30.jpg",
     "title": "40+ Amenities. 2 Pools. 76 Showrooms.",
     "subtitle": "From wellness to recreation, experience life without limits."
   }

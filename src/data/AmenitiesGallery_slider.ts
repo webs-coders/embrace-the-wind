@@ -14,7 +14,7 @@ export const amenitySlides: AmenitySlide[] = [
     description:
       "Relax and unwind in our sophisticated lounge with premium furnishings and ambient lighting.",
     image:
-      "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/ResizedImages/EMBRACE_THE_WIND_23.jpg",
   },
   {
     id: "02",
@@ -22,7 +22,7 @@ export const amenitySlides: AmenitySlide[] = [
     description:
       "Unwind with your close ones over a game of pool, or just relax watching your friends play!",
     image:
-      "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/ResizedImages/EMBRACE_THE_WIND_24.jpg",
   },
   {
     id: "03",
@@ -30,7 +30,7 @@ export const amenitySlides: AmenitySlide[] = [
     description:
       "Host memorable celebrations in our elegant party hall with modern amenities.",
     image:
-      "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/ResizedImages/EMBRACE_THE_WIND_26.jpg",
   },
   {
     id: "04",
@@ -38,7 +38,7 @@ export const amenitySlides: AmenitySlide[] = [
     description:
       "State-of-the-art fitness equipment with panoramic city views to energize your workout.",
     image:
-      "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/ResizedImages/EMBRACE_THE_WIND_25.jpg",
   },
   {
     id: "05",
@@ -46,6 +46,6 @@ export const amenitySlides: AmenitySlide[] = [
     description:
       "Take a refreshing dip in our infinity pool overlooking the city skyline.",
     image:
-      "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/ResizedImages/EMBRACE_THE_WIND_06.jpg",
   },
 ];

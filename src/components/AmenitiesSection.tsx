@@ -166,7 +166,7 @@ const AmenitiesSection: React.FC = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-slate-900 text-white py-4 rounded-lg font-semibold text-lg uppercase hover:bg-slate-800 hover:scale-105 transition duration-300"
+                    className="w-full bg-color-light-orange text-white py-4 rounded-lg font-semibold text-lg uppercase hover:bg-color-orange hover:scale-105 transition duration-300"
                   >
                     Submit
                   </button>
