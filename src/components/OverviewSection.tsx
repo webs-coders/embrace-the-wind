@@ -51,7 +51,7 @@ const OverviewSection: React.FC = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
                 <Image
-                  src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/ResizedImages/EMBRACE_THE_WIND_20.jpg"
                   alt="Luxury Interior - Embrace The Wind Classic Residence"
                   fill
                   className="object-cover"
@@ -64,7 +64,7 @@ const OverviewSection: React.FC = () => {
                 </h3>
                 <div className="w-2 h-2 bg-color-orange rounded-full inline-block"></div>
               </div>
-              <div className="absolute top-6 sm:top-8 left-6 sm:left-8 w-12 h-12 sm:w-16 sm:h-16 bg-gold-400 rounded-full opacity-80"></div>
+              <div className="absolute top-6 sm:top-8 left-6 sm:left-8 w-12 h-12 sm:w-16 sm:h-16 bg-color-light-orange rounded-full opacity-80"></div>
             </div>
           </div>
 

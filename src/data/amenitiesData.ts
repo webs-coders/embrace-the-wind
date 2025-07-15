@@ -106,12 +106,12 @@ export const landscapeFeatures: string[] = [
   "Raised garden beds with rich, thick planting for a lush look",
 ];
 
-export const landscapeImage = "/images/EMBRACETHEWIND1.jpg"; // relative path
+export const landscapeImage = "/ResizedImages/EMBRACE_THE_WIND_05.jpg"; // relative path
 
 
 export const landscapeSectionImages = {
-  planImage: "/images/EMBRACETHEWIND1.jpg",
-  renderImage: "/images/EMBRACETHEWIND2.jpg",
+  planImage: "/ResizedImages/EMBRACE_THE_WIND_16.jpg",
+  renderImage: "/ResizedImages/EMBRACE_THE_WIND_13.jpg",
 };
 
 export const landscapeDescription = [

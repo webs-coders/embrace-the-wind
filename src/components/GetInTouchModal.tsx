@@ -51,7 +51,7 @@ export default function GetInTouchModal() {
         <div className="w-1/2 bg-gray-100 p-6 hidden md:flex flex-col items-center justify-center">
         <h3 className="text-lg font-semibold text-gray-700 mb-5">Embrace The Wind</h3>
           <Image
-            src="/images/EMBRACETHEWIND1.jpg"
+            src="/ResizedImages/EMBRACE_THE_WIND_01.jpg"
             alt="Project"
             width={400}
             height={300}
