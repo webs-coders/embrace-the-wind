@@ -45,7 +45,7 @@ export default function EmbraceChatbot() {
         <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
           <button
             onClick={handleOpen}
-            className="relative bg-gradient-to-r from-orange-500 to-yellow-400 text-white rounded-full p-4 shadow-2xl animate-pulse hover:scale-105 transition-transform"
+            className="relative bg-color-orange text-white rounded-full p-4 shadow-2xl animate-pulse hover:scale-105 transition-transform"
             aria-label="Open Embrace AI Assistant"
           >
             <MessageCircle className="w-6 h-6" />

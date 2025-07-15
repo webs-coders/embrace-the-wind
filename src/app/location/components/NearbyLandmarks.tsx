@@ -12,14 +12,14 @@ export default function NearbyLandmarks() {
           {nearbyPlaces.map((place, index) => (
             <Card key={index} className="hover:scale-105 transition-all duration-300">
               <CardHeader className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mb-4" />
+                <div className="w-16 h-16 bg-color-light-orange rounded-full flex items-center justify-center mb-4" />
                 <Chip color="warning" variant="bordered" className="mb-1">
                   {place.type}
                 </Chip>
               </CardHeader>
               <CardBody>
                 <h4 className="font-semibold text-navy">{place.name}</h4>
-                <p className="text-sm text-yellow-600">{place.distance}</p>
+                <p className="text-sm text-color-orange">{place.distance}</p>
               </CardBody>
             </Card>
           ))}

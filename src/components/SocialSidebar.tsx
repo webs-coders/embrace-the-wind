@@ -25,7 +25,7 @@ const SocialSidebar: React.FC = () => {
       <div className="fixed bottom-6 left-6 z-40">
         <a
           href={callButton.href}
-          className="w-14 h-14 bg-gradient-to-r from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-pulse"
+          className="w-14 h-14 bg-color-orange rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-pulse"
           aria-label={callButton.label}
         >
           <callButton.icon className="w-6 h-6" />

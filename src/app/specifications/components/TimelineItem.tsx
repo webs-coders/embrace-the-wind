@@ -36,14 +36,14 @@ export default function TimelineItem({
     >
       {/* Card */}
       <div
-        className="relative bg-[#ffffff] border border-[#ff8c00] rounded-xl shadow-lg p-6 transition-all duration-300"
+        className="relative bg-[#ffffff] border border-color-orange rounded-xl shadow-lg p-6 transition-all duration-300"
         onClick={() => setIsOpen(!isOpen)}
       >
         {/* Center Dot - now inside the card and vertically centered */}
-        <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-full lg:-left-10 w-6 h-6 bg-[#ff8c00] border-4 border-white rounded-full z-10 shadow-lg" />
+        {/* <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-full lg:-left-10 w-6 h-6 bg-color-orange border-4 border-white rounded-full z-10 shadow-lg ms-[10px]" /> */}
 
         <div className="flex justify-between items-center cursor-pointer">
-          <h3 className="text-xl font-bold text-[#ff8c00]">{spec.title}</h3>
+          <h3 className="text-xl font-bold text-color-light-orange">{spec.title}</h3>
           <ChevronDown
             className={`text-black transition-transform ${isOpen ? "rotate-180" : ""}`}
           />

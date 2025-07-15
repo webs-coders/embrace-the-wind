@@ -59,7 +59,7 @@ const AmenitiesSection: React.FC = () => {
           {/* Left Side - Amenities */}
           <div className="space-y-12">
             <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-gold-400 mb-4">Amenities</h2>
+              <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-color-light-orange mb-4">Amenities</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-gold-400 to-gold-600"></div>
             </div>
 
@@ -75,7 +75,7 @@ const AmenitiesSection: React.FC = () => {
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-gold-400/20 to-gold-600/20 rounded-full flex items-center justify-center group-hover:from-gold-400/30 group-hover:to-gold-600/30 transition-all duration-300">
-                      <Icon className="w-8 h-8 text-gold-400 group-hover:text-gold-300 transition-colors duration-300" />
+                      <Icon className="w-8 h-8 text-color-light-orange group-hover:text-gold-300 transition-colors duration-300" />
                     </div>
                     <h3 className="font-semibold text-lg text-white group-hover:text-gold-300 transition-colors duration-300">{amenity.title}</h3>
                     <p className="text-sm text-white/90 mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">

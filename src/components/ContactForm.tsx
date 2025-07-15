@@ -97,7 +97,7 @@ const ContactForm = () => {
 
           <button
             type="submit"
-            className="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition"
+            className="w-full bg-color-light-orange text-white py-2 rounded hover:bg-color-orange transition"
           >
             Submit Enquiry
           </button>

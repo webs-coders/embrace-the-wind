@@ -12,15 +12,36 @@
   }
   
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
   
   .font-playfair {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
   }
 }
 
 @layer components {
+
+  .text-color-orange  {
+    color: #ff6600;
+  }
+
+  .bg-color-orange {
+    background-color: #ff6600;
+  }
+
+  .text-color-light-orange {
+    color: #ff9933;
+  }
+
+  .bg-color-light-orange {
+    background-color: #ff9933;
+  }
+
+  .border-color-orange {
+    border-color: #ff6600;
+  }
+   
   .text-gold-300 {
     color: #fcd34d;
   }

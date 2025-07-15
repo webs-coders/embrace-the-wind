@@ -16,7 +16,7 @@ const LandscapeHighlights = () => {
           <ul className="flex-1 space-y-5">
             {landscapeFeatures.map((feature, index) => (
               <li key={index} className="flex items-start gap-3">
-                <div className="w-2 h-2 mt-2 bg-yellow-400 rounded-full shrink-0" />
+                <div className="w-2 h-2 mt-2 bg-color-light-orange rounded-full shrink-0" />
                 <span className="text-sm sm:text-base text-white/90 leading-relaxed">
                   {feature}
                 </span>

@@ -33,7 +33,7 @@ const BuilderCard = ({
       </div>
       <div className="flex flex-col justify-center md:w-2/3">
         <h3 className="text-3xl font-semibold mb-3">{name}</h3>
-        <div className="h-1 w-14 bg-orange-500 mb-4"></div>
+        <div className="h-1 w-14 bg-color-orange mb-4"></div>
         <p className="text-base md:text-lg leading-relaxed mb-3">
           {description}
         </p>
@@ -49,7 +49,7 @@ const EmbraceTheWindHighlight = () => (
   <section className="py-20 px-6 md:px-16 bg-gradient-to-b from-white via-zinc-50 to-white text-black">
     <div className="max-w-4xl mx-auto text-center">
       <h2 className="text-4xl font-extrabold mb-4">{project.title}</h2>
-      <div className="h-1 w-14 mx-auto bg-orange-500 mb-6"></div>
+      <div className="h-1 w-14 mx-auto bg-color-orange mb-6"></div>
       <p className="text-lg leading-relaxed">{project.description}</p>
     </div>
   </section>
@@ -59,7 +59,7 @@ const ArchitectHighlight = () => (
   <section className="py-20 px-6 md:px-16 bg-zinc-100 text-black">
     <div className="max-w-4xl mx-auto text-center">
       <h2 className="text-4xl font-extrabold mb-4">{architect.title}</h2>
-      <div className="h-1 w-14 mx-auto bg-orange-500 mb-6"></div>
+      <div className="h-1 w-14 mx-auto bg-color-orange mb-6"></div>
       <p className="text-lg leading-relaxed mb-3">{architect.description}</p>
       <p className="text-lg leading-relaxed mb-3">{architect.description1}</p>
       <p className="text-xl font-medium italic mt-6">

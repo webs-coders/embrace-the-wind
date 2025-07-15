@@ -62,7 +62,7 @@ const OverviewSection: React.FC = () => {
                 <h3 className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">
                   Embrace The Wind
                 </h3>
-                <div className="w-2 h-2 bg-gold-400 rounded-full inline-block"></div>
+                <div className="w-2 h-2 bg-color-orange rounded-full inline-block"></div>
               </div>
               <div className="absolute top-6 sm:top-8 left-6 sm:left-8 w-12 h-12 sm:w-16 sm:h-16 bg-gold-400 rounded-full opacity-80"></div>
             </div>
@@ -76,7 +76,7 @@ const OverviewSection: React.FC = () => {
           >
             {/* Section Label */}
             <div>
-              <span className="inline-block px-4 py-2 bg-gold-100 text-gold-700 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider mb-4">
+              <span className="inline-block px-4 py-2 bg-gold-100 text-color-orange rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider mb-4">
                 Overview
               </span>
             </div>
@@ -84,7 +84,7 @@ const OverviewSection: React.FC = () => {
             {/* Main Heading */}
             <h2 className="font-playfair text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 leading-tight">
               Elegance at Every Corner!{" "}
-              <span className="block text-gold-600">World-Class lifestyles!</span>
+              <span className="block text-color-orange">World-Class lifestyles!</span>
             </h2>
 
             {/* Description */}
@@ -96,30 +96,30 @@ const OverviewSection: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 py-4 sm:py-8">
               {/* Total Units */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gold-100 rounded-full flex items-center justify-center">
-                  <Home className="w-6 h-6 sm:w-8 sm:h-8 text-gold-600" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-color-light-orange rounded-full flex items-center justify-center">
+                  <Home className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
                 <div>
                   <p className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider">
                     Total Units
                   </p>
                   <p className="text-xl sm:text-2xl font-bold text-slate-800">
-                    <span className="text-gold-600">352</span> (3 & 4 BHK)
+                    <span className="text-color-orange">352</span> (3 & 4 BHK)
                   </p>
                 </div>
               </div>
 
               {/* Total Tower */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gold-100 rounded-full flex items-center justify-center">
-                  <Building className="w-6 h-6 sm:w-8 sm:h-8 text-gold-600" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-color-light-orange rounded-full flex items-center justify-center">
+                  <Building className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
                 <div>
                   <p className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider">
                     Total Tower
                   </p>
                   <p className="text-xl sm:text-2xl font-bold text-slate-800">
-                    <span className="text-gold-600">5</span> (B+G+18)
+                    <span className="text-color-orange">5</span> (B+G+18)
                   </p>
                 </div>
               </div>
