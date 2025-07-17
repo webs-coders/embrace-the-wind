@@ -109,7 +109,7 @@ const router = useRouter();
       </div>
 
       {/* Large decorative title */}
-      <div className="absolute bottom-8 right-8 opacity-5 pointer-events-none">
+      <div className="absolute bottom-18 right-8 opacity-5 pointer-events-none">
         <h3 className="font-playfair text-8xl md:text-9xl font-bold text-slate-800 rotate-12">
           Embrace The Wind
         </h3>

@@ -59,9 +59,9 @@ const HeroSection = () => {
       <div className="relative z-10 flex flex-col items-center justify-center text-center min-h-screen px-4 container mx-auto">
         <div className="max-w-4xl mx-auto space-y-6 transition-opacity duration-1000 ease-in-out">
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white !leading-[1.3] ">
-            {slide.title.split(' ').slice(0, -1).join(' ')}{' '}
+            {slide.title}
             <span className="block text-transparent bg-clip-text bg-color-orange">
-              {slide.title.split(' ').slice(-1)[0]}
+              {slide.title1}
             </span>
           </h1>
           <p className="text-lg md:text-xl lg:text-xl text-white/90 font-light">

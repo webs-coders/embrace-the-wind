@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { landscapeSectionImages, landscapeDescription } from "@/data/amenitiesData";
+import { landscapeSectionImages, landscapeTitle, landscapeDescription, landscapeTitle1, landscapeDescription1 } from "@/data/amenitiesData";
 
 const LandscapeSection = () => {
   return (
@@ -25,6 +25,14 @@ const LandscapeSection = () => {
               sizes="(max-width: 768px) 100vw, 50vw"
               priority
             />
+          </div>
+
+          <div className="text-center lg:text-left space-y-4">
+            {landscapeTitle.map((title, idx) => (
+              <p key={idx} className="text-gray-600 text-base font-bold md:text-lg leading-relaxed">
+                {title}
+              </p>
+            ))}
           </div>
 
           <div className="text-center lg:text-left space-y-4">
@@ -53,6 +61,21 @@ const LandscapeSection = () => {
               className="w-full h-auto object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
+          </div>
+          <div className="text-center lg:text-left space-y-4 mt-6">
+            {landscapeTitle1.map((title, idx) => (
+              <p key={idx} className="text-gray-600 text-base font-bold md:text-lg leading-relaxed">
+                {title}
+              </p>
+            ))}
+          </div>
+          
+          <div className="text-center lg:text-left space-y-4 mt-4">
+            {landscapeDescription1.map((para, idx) => (
+              <p key={idx} className="text-gray-600 text-base md:text-lg leading-relaxed">
+                {para}
+              </p>
+            ))}
           </div>
         </motion.div>
       </div>

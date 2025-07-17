@@ -10,15 +10,15 @@ import { Droplets,
   SplitSquareHorizontal,
   Bus,
   Home,
-  Landmark,
   Footprints,
-  Dribbble,
-  Umbrella,
   Bike,
   Tent,
   Puzzle,
   Sofa,
   Monitor,
+  Sun,
+  MoveRight,
+  ParkingCircle
  } from "lucide-react";
 
 export const mainAmenities = [
@@ -79,11 +79,11 @@ export const detailedAmenities = [
   { icon: SplitSquareHorizontal, name: "Separate Ramp Entry for In & Out", description: "Organized traffic flow with independent vehicle ramps." },
   { icon: Bus, name: "Drop-Off Zone", description: "Convenient pick-up and drop-off area for residents and visitors." },
   { icon: Home, name: "Security Cabin", description: "On-site control room to monitor and manage entry points." },
-  { icon: Landmark, name: "Gazebo", description: "Tranquil outdoor pavilion ideal for social gatherings or solitude." },
+  { icon: Tent, name: "Gazebo", description: "Tranquil outdoor pavilion ideal for social gatherings or solitude." },
   { icon: Footprints, name: "Walkway", description: "Landscaped paths for peaceful strolls within the community." },
-  { icon: Dribbble, name: "Volleyball Court", description: "Dedicated court for active play and friendly competition." },
+  { icon: MoveRight, name: "Volleyball Court", description: "Dedicated court for active play and friendly competition." },
   { icon: Dumbbell, name: "Gym Area", description: "Fully-equipped indoor gym catering to all fitness goals." },
-  { icon: Umbrella, name: "Swimming Pool Deck", description: "Spacious lounging area surrounding the pool with sunbeds." },
+  { icon: Sun, name: "Swimming Pool Deck", description: "Spacious lounging area surrounding the pool with sunbeds." },
   { icon: Bike, name: "Open Gym", description: "Outdoor workout stations amidst greenery for fresh-air fitness." },
   { icon: Tent, name: "Multipurpose Hall", description: "Versatile venue for community events, parties, or meetings." },
   { icon: Puzzle, name: "Indoor Games Area", description: "Recreational space featuring games for all ages." },
@@ -91,7 +91,8 @@ export const detailedAmenities = [
   { icon: Monitor, name: "CCTV Room", description: "Surveillance control room ensuring complete camera coverage." },
   { icon: Droplets, name: "Indoor Swimming Pool", description: "Covered pool ideal for all-weather swimming and relaxation." },
   { icon: Target, name: "Box Cricket Arena", description: "Fun-filled cricket space for sporty recreation within the premises." },
-  { icon: Dribbble, name: "Badminton Court", description: "Dedicated zone for indoor racquet sports and casual play." },
+  { icon: MoveRight, name: "Badminton Court", description: "Dedicated zone for indoor racquet sports and casual play." },
+  { icon: ParkingCircle, name: "Basement Parking", description: "2 to 3 dedicated parking spots per residence, ensuring ample space for families with multiple vehicles." },
 ];
 
 
@@ -110,11 +111,22 @@ export const landscapeImage = "/ResizedImages/EMBRACE_THE_WIND_05.jpg"; // relat
 
 
 export const landscapeSectionImages = {
-  planImage: "/ResizedImages/EMBRACE_THE_WIND_16.jpg",
-  renderImage: "/ResizedImages/EMBRACE_THE_WIND_13.jpg",
+  planImage: "/ResizedImages/EMBRACE_THE_WIND_14.jpg",
+  renderImage: "/ResizedImages/EMBRACE_THE_WIND_10.jpg",
 };
 
+export const landscapeTitle = [
+  "Biophilia in Design",
+];
 export const landscapeDescription = [
-  "A nature-inspired haven for every generation.",
-  "From playful zones to peaceful gardens, it invites all ages to connect, unwind, and belong.",
+  "Nature is part of everyday life at Embrace The Wind.",
+  "From green walkways and open gardens to relaxing gazebos and rain-kissed balconies, every space is designed to bring comfort, calm, and fresh air to your home.",
+];
+
+export const landscapeTitle1 = [
+  "Art That Lives With You",
+];
+export const landscapeDescription1 = [
+  "At Embrace The Wind, creativity finds its canvas in every corner.",
+  "Mural walls, sculptural elements, and themed installations turn everyday surroundings into vibrant visual experiences, adding charm, culture, and inspiration to your daily routine.",
 ];

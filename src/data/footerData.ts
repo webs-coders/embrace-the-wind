@@ -15,7 +15,7 @@ export const contactDetails = {
 Sargasan Cross Road, Sargasan,
 Gandhinagar - 382421.`,
   phone: "+91 9797976577",
-  email: "Embracethewind33@gmail.com",
+  email: "embracethewind33@gmail.com",
 };
 
 export const bankLogos = [

@@ -9,9 +9,9 @@ const BrochureCTA = () => {
   return (
     <>
       <div className="relative bg-gradient-to-r from-yellow-400 via-orange-500 to-red-400 text-white text-center p-12 rounded-3xl shadow-xl overflow-hidden">
-        <h3 className="text-3xl font-playfair font-bold mb-4 drop-shadow-lg">Want Full Specs?</h3>
+        <h3 className="text-3xl font-playfair font-bold mb-4 drop-shadow-lg">Want the Full Picture?</h3>
         <p className="text-white/90 mb-6 text-sm md:text-base max-w-xl mx-auto">
-          Download the detailed brochure including all layouts, specifications, and architectural details of Embrace The Wind.
+          Explore every detail—from spacious layouts and branded fittings to architectural finesse and curated amenities.
         </p>
         <button
           onClick={() => setIsOpen(true)}

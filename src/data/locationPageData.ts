@@ -1,9 +1,10 @@
+import { Train, Hospital, ShoppingBag, School } from "lucide-react";
+
 export const nearbyPlaces = [
-  { name: "Railway Station", type: "Transport", distance: "2 km" },
-  { name: "City Hospital", type: "Healthcare", distance: "1.5 km" },
-  { name: "Phoenix Mall", type: "Shopping", distance: "3 km" },
-  { name: "Primary School", type: "Education", distance: "0.8 km" },
-  // add more as needed
+  { name: "Railway Station", distance: "2 km", icon: Train },
+  { name: "City Hospital", distance: "1.5 km", icon: Hospital },
+  { name: "Phoenix Mall", distance: "3 km", icon: ShoppingBag },
+  { name: "Primary School", distance: "0.8 km", icon: School },
 ];
 
 export const locationHighlights = [

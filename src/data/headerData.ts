@@ -4,8 +4,8 @@ export const contactInfo = {
     href: 'tel:+919797976577',
   },
   email: {
-    label: 'Embracethewind33@gmail.com',
-    href: 'mailto:Embracethewind33@gmail.com',
+    label: 'embracethewind33@gmail.com',
+    href: 'mailto:embracethewind33@gmail.com',
   },
 };
 

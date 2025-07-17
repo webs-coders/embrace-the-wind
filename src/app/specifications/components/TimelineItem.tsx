@@ -6,7 +6,6 @@ import { useState } from "react";
 
 // Define the Specification type inline here
 interface SpecificationItem {
-  item: string;
   details: string;
 }
 
@@ -55,9 +54,9 @@ export default function TimelineItem({
             animate={{ opacity: 1 }}
             className="mt-4 space-y-2 text-sm text-black"
           >
-            {spec.items.map(({ item, details }, i) => (
-              <li key={i}>
-                <strong>{item}:</strong> {details}
+            {spec.items.map(({details }, i) => (
+              <li key={i} className="relative pl-4 before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:rounded-full before:bg-black">
+                {details}
               </li>
             ))}
           </motion.ul>

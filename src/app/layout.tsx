@@ -65,7 +65,7 @@ export default function RootLayout({
       addressCountry: "IN",
     },
     telephone: "+91-9797976577",
-    email: "Embracethewind33@gmail.com",
+    email: "embracethewind33@gmail.com",
     numberOfRooms: 352,
     floorSize: {
       "@type": "QuantitativeValue",

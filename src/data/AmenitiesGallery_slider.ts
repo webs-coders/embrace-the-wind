@@ -10,41 +10,41 @@ export interface AmenitySlide {
 export const amenitySlides: AmenitySlide[] = [
   {
     id: "01",
-    title: "Lounge Area",
+    title: "Work-from-Home Lounge & Library",
     description:
-      "Relax and unwind in our sophisticated lounge with premium furnishings and ambient lighting.",
-    image:
-      "/ResizedImages/EMBRACE_THE_WIND_23.jpg",
-  },
-  {
-    id: "02",
-    title: "Game Room",
-    description:
-      "Unwind with your close ones over a game of pool, or just relax watching your friends play!",
-    image:
-      "/ResizedImages/EMBRACE_THE_WIND_24.jpg",
-  },
-  {
-    id: "03",
-    title: "Party Hall",
-    description:
-      "Host memorable celebrations in our elegant party hall with modern amenities.",
+      "Purpose-built for the new hybrid lifestyle, this zone combines productivity and peace, offering serene corners for reading, online meetings, or quiet reflection.",
     image:
       "/ResizedImages/EMBRACE_THE_WIND_26.jpg",
   },
   {
-    id: "04",
-    title: "Fitness Center",
+    id: "02",
+    title: "Premium Residences with Private Patios",
     description:
-      "State-of-the-art fitness equipment with panoramic city views to energize your workout.",
+      "Each home features a private patio, generous balconies, and personal foyers, offering comfort, privacy, and an elevated living experience every day.",
     image:
-      "/ResizedImages/EMBRACE_THE_WIND_25.jpg",
+      "/ResizedImages/EMBRACE_THE_WIND_20.jpg",
+  },
+  {
+    id: "03",
+    title: "Designer Kitchen with Smart Storage",
+    description:
+      "Elegant kitchens feature polished granite counters, vitrified tile backsplashes, smart layouts, a wash yard, and a dedicated store room for everyday ease.",
+    image:
+      "/ResizedImages/EMBRACE_THE_WIND_23.jpg",
+  },
+  {
+    id: "04",
+    title: "Penthouse Splendor",
+    description:
+      "The 4BHK penthouses redefine luxury with expansive terraces (up to 685 sq ft), signature glass bridges, and exclusive lounge spaces designed to impress.",
+    image:
+      "/ResizedImages/EMBRACE_THE_WIND_21.jpg",
   },
   {
     id: "05",
-    title: "Swimming Pool",
+    title: "Resort-Style Dual Swimming Pools",
     description:
-      "Take a refreshing dip in our infinity pool overlooking the city skyline.",
+      "Two exclusive pools—one for laps, another for leisure—create a dynamic escape for residents",
     image:
       "/ResizedImages/EMBRACE_THE_WIND_06.jpg",
   },
