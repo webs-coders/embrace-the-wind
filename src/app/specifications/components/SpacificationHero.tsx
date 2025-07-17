@@ -13,7 +13,7 @@ const SpecificationHero: React.FC<SpecificationHeroProps> = ({ isVisible }) => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          Modern Specifications
+          Crafted Spaces. Trusted Standards.
         </h1>
 
         <p
@@ -21,7 +21,7 @@ const SpecificationHero: React.FC<SpecificationHeroProps> = ({ isVisible }) => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          Designed for elegance. Engineered for tomorrow.
+          Precision in materials. Passion in every finish.
         </p>
       </div>
     </section>

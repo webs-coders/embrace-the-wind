@@ -11,7 +11,7 @@ const SocialSidebar: React.FC = () => {
           <a
             key={label}
             href={href}
-            className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-gold-500 hover:scale-110 transition-all duration-300 group"
+            className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-color-orange hover:scale-110 transition-all duration-300 group"
             aria-label={label}
             target="_blank"
             rel="noopener noreferrer"

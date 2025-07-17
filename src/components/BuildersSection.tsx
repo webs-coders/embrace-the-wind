@@ -60,7 +60,8 @@ const ArchitectHighlight = () => (
     <div className="max-w-4xl mx-auto text-center">
       <h2 className="text-4xl font-extrabold mb-4">{architect.title}</h2>
       <div className="h-1 w-14 mx-auto bg-color-orange mb-6"></div>
-      <p className="text-lg leading-relaxed mb-3">{architect.description}</p>
+      <p className="text-lg leading-relaxed mb-3">With over 300 thoughtfully realized projects,  
+        <a className="text-color-light-orange font-bold" href="https://www.mansishah.co.in/" target="blank"> Mansi Shah</a> stands as one of Gujarat’s most respected voices in contemporary architecture. As the founder of Mansi Shah Architects (MSA), her philosophy goes beyond structure—focusing on how people live, feel, and connect with their environment.</p>
       <p className="text-lg leading-relaxed mb-3">{architect.description1}</p>
       <p className="text-xl font-medium italic mt-6">
         &quot;{architect.caption}&quot;
