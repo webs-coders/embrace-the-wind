@@ -7,7 +7,6 @@ import AmenitiesGallery from "@/components/AmenitiesGallery";
 import Footer from "@/components/Footer";
 import { galleryImages } from "@/data/galleryData";
 import Image from "next/image";
-import Masonry from 'react-masonry-css';
 
 export default function GalleryPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,34 +49,30 @@ export default function GalleryPage() {
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
             Our Gallery
           </h2>
-          <Masonry
-            breakpointCols={{
-              default: 2,
-              1100: 2,
-              700: 1,
-            }}
-            className="flex gap-6"
-            columnClassName="masonry-column"
-          >
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {galleryImages.map((image, index) => (
               <div
                 key={index}
-                className="mb-6 cursor-pointer overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-500"
+                className="group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-500 cursor-pointer"
                 onClick={() => openModal(index)}
               >
                 <Image
                   src={image.src}
                   alt={image.alt}
                   width={600}
-                  height={0} // set to 0 to allow dynamic height
-                  sizes="(max-width: 768px) 100vw, 600px"
-                  loading="lazy"
+                  priority={false}
                   quality={75}
-                  className="w-full h-auto rounded-xl transition-transform duration-500 hover:scale-105"
+                  loading="lazy"
+                  height={400}
+                  className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
+                {/* <div className="bg-gray-900 text-white text-sm px-4 py-2 text-center">
+                  {image.alt}
+                </div> */}
               </div>
             ))}
-          </Masonry>
+          </div>
         </div>
       </section>
 

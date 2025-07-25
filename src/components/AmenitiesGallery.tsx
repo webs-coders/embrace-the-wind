@@ -4,11 +4,33 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { amenitySlides, AmenitySlide } from "@/data/AmenitiesGallery_slider";
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
 
 const AmenitiesGallery: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const thumbnailSliderRef = useRef<HTMLDivElement>(null);
+
+  const autoplayDelay = 4000;
+  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    startAutoplay();
+    return stopAutoplay;
+  }, []);
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    autoplayRef.current = setInterval(() => {
+      nextSlide();
+    }, autoplayDelay);
+  };
+
+  const stopAutoplay = () => {
+    if (autoplayRef.current) clearInterval(autoplayRef.current);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,7 +43,6 @@ const AmenitiesGallery: React.FC = () => {
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
-
     return () => observer.disconnect();
   }, []);
 
@@ -39,15 +60,49 @@ const AmenitiesGallery: React.FC = () => {
     setCurrentSlide(index);
   };
 
+  const [thumbnailRef] = useKeenSlider<HTMLDivElement>({
+    breakpoints: {
+      "(max-width: 640px)": {
+        slides: {
+          perView: 3.5,
+          spacing: 12,
+        },
+      },
+    },
+    slides: {
+      perView: 5,
+      spacing: 16,
+    },
+    mode: "free",
+    rubberband: false,
+  });
+
+  useEffect(() => {
+    const thumb = thumbnailSliderRef.current?.querySelector(
+      `.keen-slider__slide:nth-child(${currentSlide + 1})`
+    );
+    if (thumb) {
+      thumb.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+    }
+  }, [currentSlide]);
+
   return (
     <section
       ref={sectionRef}
       id="amenities-gallery"
-      className="relative overflow-hidden py-16 bg-slate-100"
+      className="relative overflow-hidden py-12 sm:py-16 bg-slate-100"
     >
       <div className="container mx-auto px-4 lg:px-8">
-        {/* Main Image Slider */}
-        <div className="relative h-[70vh] rounded-2xl overflow-hidden shadow-xl">
+        {/* Main Slider */}
+        <div
+          className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] rounded-2xl overflow-hidden shadow-xl"
+          onMouseEnter={stopAutoplay}
+          onMouseLeave={startAutoplay}
+        >
           {amenitySlides.map((slide: AmenitySlide, index) => (
             <div
               key={slide.id}
@@ -55,32 +110,24 @@ const AmenitiesGallery: React.FC = () => {
                 index === currentSlide ? "opacity-100" : "opacity-0"
               }`}
             >
-              {/* Background Image */}
               <Image
                 src={slide.image}
                 alt={slide.title}
                 fill
                 className="object-cover"
               />
-
-              {/* Dark Overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-
-              {/* Slide Text */}
-              <div className="absolute left-6 lg:left-16 top-1/2 -translate-y-1/2 max-w-lg space-y-4 text-white">
-                {/* Number and Icon */}
+              <div className="absolute left-4 sm:left-6 lg:left-16 top-1/2 -translate-y-1/2 max-w-lg space-y-4 text-white">
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 rounded-full bg-color-light-orange text-black flex items-center justify-center">
-                    <Play size={18} />
+                    <Play size={16} />
                   </div>
-                  <span className="text-color-orange font-bold text-lg">
+                  <span className="text-orange-500 font-bold text-sm sm:text-lg">
                     {slide.id}/0{amenitySlides.length}
                   </span>
                 </div>
-
-                {/* Title */}
                 <h3
-                  className={`text-3xl lg:text-5xl font-bold transition-all duration-700 ${
+                  className={`text-xl sm:text-3xl lg:text-5xl font-bold transition-all duration-700 ${
                     isVisible
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-10"
@@ -88,10 +135,8 @@ const AmenitiesGallery: React.FC = () => {
                 >
                   {slide.title}
                 </h3>
-
-                {/* Description */}
                 <p
-                  className={`text-white/90 text-base lg:text-lg transition-all duration-700 delay-300 ${
+                  className={`text-white/90 text-sm sm:text-base lg:text-lg transition-all duration-700 delay-300 ${
                     isVisible
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-10"
@@ -106,27 +151,26 @@ const AmenitiesGallery: React.FC = () => {
           {/* Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 hover:scale-110 transition"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-1 sm:p-2 rounded-full hover:bg-white/30 hover:scale-110 transition"
           >
-            <ChevronLeft size={20} />
+            <ChevronLeft size={18} />
           </button>
-
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 hover:scale-110 transition"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-1 sm:p-2 rounded-full hover:bg-white/30 hover:scale-110 transition"
           >
-            <ChevronRight size={20} />
+            <ChevronRight size={18} />
           </button>
 
-          {/* Slide Indicators */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3">
+          {/* Dots */}
+          <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
             {amenitySlides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                   index === currentSlide
-                    ? "bg-color-orange scale-125"
+                    ? "bg-orange-400 scale-125"
                     : "bg-white/40 hover:bg-white/60"
                 }`}
               />
@@ -134,19 +178,25 @@ const AmenitiesGallery: React.FC = () => {
           </div>
         </div>
 
-        {/* Thumbnail Navigation */}
-        <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        {/* Thumbnails */}
+        <div
+          ref={(ref) => {
+            thumbnailRef(ref);
+            thumbnailSliderRef.current = ref;
+          }}
+          className="keen-slider mt-6 sm:mt-10 overflow-x-auto whitespace-nowrap"
+        >
           {amenitySlides.map((slide, index) => (
             <button
               key={slide.id}
               onClick={() => goToSlide(index)}
-              className={`relative group overflow-hidden rounded-xl transition transform ${
+              className={`keen-slider__slide relative group overflow-hidden rounded-xl transition-all transform min-w-[100px] sm:min-w-[120px] h-20 sm:h-24 ${
                 index === currentSlide
-                  ? "ring-4 ring-yellow-400 scale-105"
+                  ? "ring-4 ring-orange-300 scale-105"
                   : "hover:scale-105"
               }`}
             >
-              <div className="relative w-full h-24">
+              <div className="relative w-full h-full">
                 <Image
                   src={slide.image}
                   alt={slide.title}
@@ -157,11 +207,11 @@ const AmenitiesGallery: React.FC = () => {
               <div
                 className={`absolute inset-0 ${
                   index === currentSlide
-                    ? "bg-color-light-orange/80"
+                    ? "bg-orange-200/70"
                     : "bg-black/40 group-hover:bg-black/30"
                 } transition`}
-              ></div>
-              <span className="absolute bottom-2 left-2 text-white text-xs font-semibold">
+              />
+              <span className="absolute bottom-1 left-1 text-white text-xs font-semibold">
                 {slide.id}
               </span>
             </button>

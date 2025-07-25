@@ -48,4 +48,36 @@ export const amenitySlides: AmenitySlide[] = [
     image:
       "/ResizedImages/EMBRACE_THE_WIND_06.jpg",
   },
+  {
+    id: "06",
+    title: "home theater",
+    description:
+      "Elegant kitchens feature polished granite counters, vitrified tile backsplashes, smart layouts, a wash yard, and a dedicated store room for everyday ease.",
+    image:
+      "/ResizedImages/EMBRACE_THE_WIND_27.jpg",
+  },
+  {
+    id: "07",
+    title: "Indoor swimming pool",
+    description:
+      "The 4BHK penthouses redefine luxury with expansive terraces (up to 685 sq ft), signature glass bridges, and exclusive lounge spaces designed to impress.",
+    image:
+      "/ResizedImages/EMBRACE_THE_WIND_28.jpg",
+  },
+  {
+    id: "08",
+    title: "Gym",
+    description:
+      "Two exclusive pools—one for laps, another for leisure—create a dynamic escape for residents",
+    image:
+      "/ResizedImages/EMBRACE_THE_WIND_25.jpg",
+  },
+   {
+    id: "09",
+    title: "Yoga",
+    description:
+      "Two exclusive pools—one for laps, another for leisure—create a dynamic escape for residents",
+    image:
+      "/ResizedImages/EMBRACE_THE_WIND_22.jpg",
+  },
 ];
