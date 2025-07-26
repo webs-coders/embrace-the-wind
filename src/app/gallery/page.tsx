@@ -38,9 +38,9 @@ export default function GalleryPage() {
     <div className="min-h-screen bg-white text-black">
       <Header />
       {/* Hero Section */}
-      <section className="relative h-[80vh] w-full bg-cover bg-center bg-[url('/ResizedImages/EMBRACE_THE_WIND_29.jpg')]">
+      <section className="relative h-[70vh] sm:h-[70vh] md:h-[100vh] w-full bg-cover bg-center bg-[url('/ResizedImages/EMBRACE_THE_WIND_29.jpg')]">
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-white text-5xl md:text-6xl font-bold">Gallery</h1>
+          <h1 className="text-white text-2xl md:text-5xl font-bold">Gallery</h1>
         </div>
       </section>
 

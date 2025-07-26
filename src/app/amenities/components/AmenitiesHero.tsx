@@ -1,15 +1,16 @@
 "use client";
 
-const AmenitiesHero = () => {
+export default function AmenitiesHero() {
   return (
-    <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] w-full bg-cover bg-center bg-no-repeat bg-[url('/ResizedImages/EMBRACE_THE_WIND_30.jpg')]">
-      <div className="absolute inset-0 bg-black/60 flex items-center justify-center px-4 text-center">
-        <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-xl leading-tight max-w-4xl">
+    <section className="relative h-[70vh] sm:h-[70vh] md:h-[100vh] bg-cover bg-center bg-[url('/ResizedImages/EMBRACE_THE_WIND_30.jpg')]">
+      <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center px-4 text-center">
+        <h1 className="text-white text-2xl md:text-5xl font-bold drop-shadow-xl leading-tight max-w-4xl">
           World-Class Amenities Under One Roof
         </h1>
+        <p className="mt-4 max-w-2xl text-lg text-white/80">
+          In the heart of Gandhinagar with everything just moments away.
+        </p>
       </div>
     </section>
   );
-};
-
-export default AmenitiesHero;
+}

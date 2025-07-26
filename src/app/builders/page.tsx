@@ -12,9 +12,9 @@ export default function BuildersPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative w-full h-[70vh] sm:h-[75vh] md:h-[80vh] bg-cover bg-center bg-[url('/ResizedImages/EMBRACE_THE_WIND_30.jpg')]">
+      <section className="relative w-full h-[70vh] sm:h-[70vh] md:h-[100vh] bg-cover bg-center bg-[url('/ResizedImages/EMBRACE_THE_WIND_30.jpg')]">
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center px-4 text-center">
-          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight drop-shadow-lg">
+          <h1 className="text-white text-2xl md:text-5xl font-bold leading-tight drop-shadow-lg">
             Two Legacies. One Vision
           </h1>
         </div>
