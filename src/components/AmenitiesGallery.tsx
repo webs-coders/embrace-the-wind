@@ -92,7 +92,7 @@ const mainSettings = {
                       <Play size={18} />
                     </div>
                     <span className="text-orange-500 font-bold text-lg">
-                      0{slide.id}/0{amenitySlides.length}
+                      {slide.id}/{amenitySlides.length}
                     </span>
                   </div>
                   <h3

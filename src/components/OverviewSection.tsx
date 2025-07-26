@@ -49,7 +49,7 @@ const OverviewSection: React.FC = () => {
             }`}
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+              <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[800px]">
                 <Image
                   src="/ResizedImages/EMBRACE_THE_WIND_20.jpg"
                   alt="Luxury Interior - Embrace The Wind Classic Residence"
@@ -84,13 +84,41 @@ const OverviewSection: React.FC = () => {
             {/* Main Heading */}
             <h2 className="font-playfair text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 leading-tight">
               Elegance at Every Corner!{" "}
-              <span className="block text-color-orange">World-Class lifestyles!</span>
+              <span className="block text-color-orange">
+                World-Class lifestyles!
+              </span>
             </h2>
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               Elite 3 & 4 BHK residences with personal patios, 10.25 ft ceilings, and panoramic balconies.
             </p>
+
+            {/* Additional Content - Enhanced UI */}
+            <div
+              className={`space-y-6 sm:space-y-8 transition-all duration-1000 delay-500 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
+            >
+              <div className="relative pl-4 border-l-4 border-color-orange">
+                <h3 className="font-playfair text-2xl sm:text-3xl font-semibold text-slate-800 leading-snug">
+                  You Won’t Believe Your Eyes
+                </h3>
+                <p className="mt-2 text-sm sm:text-base italic text-slate-500">
+                  From admiring the skyline to living in it.
+                </p>
+              </div>
+
+              <div className="bg-slate-100 rounded-xl p-5 sm:p-6 shadow-inner border border-slate-200">
+                <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
+                  Here, <span className="text-color-orange font-semibold">comfort</span> isn’t an amenity—it’s a feeling.
+                  <br />
+                  <span className="text-color-orange font-semibold">Luxury</span> isn’t a feature—it’s a way of life.
+                  <br />
+                  And every day feels like a quiet celebration of being home.
+                </p>
+              </div>
+            </div>
 
             {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 py-4 sm:py-8">
