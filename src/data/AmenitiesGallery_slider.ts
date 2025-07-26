@@ -74,18 +74,18 @@ export const amenitySlides: AmenitySlide[] = [
   },
    {
     id: "09",
-    title: "Yoga",
-    description:
-      "Two exclusive pools—one for laps, another for leisure—create a dynamic escape for residents",
-    image:
-      "/ResizedImages/EMBRACE_THE_WIND_22.jpg",
-  },
-   {
-    id: "09",
     title: "Play Zone",
     description:
       "Two exclusive pools—one for laps, another for leisure—create a dynamic escape for residents",
     image:
       "/ResizedImages/EMBRACE_THE_WIND_11.jpg",
+  },
+  {
+    id: "10",
+    title: "Yoga",
+    description:
+      "Two exclusive pools—one for laps, another for leisure—create a dynamic escape for residents",
+    image:
+      "/ResizedImages/EMBRACE_THE_WIND_22.jpg",
   },
 ];
