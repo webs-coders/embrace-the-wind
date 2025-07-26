@@ -1,4 +1,5 @@
 "use client";
+
 import { locationHighlights } from "@/data/locationPageData";
 import { Card, CardHeader, CardBody } from "@nextui-org/react";
 import { MapPin } from "lucide-react";

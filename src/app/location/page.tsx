@@ -9,6 +9,7 @@ import LocationHighlights from "./components/LocationHighlights";
 import CommercialSpaces from "./components/CommercialSpaces";
 import LocationHero from "./components/LocationHero";
 import MapSection from "./components/MapSection";
+import LocationSection from "./components/LocationSection";
 
 export default function LocationPage() {
   return (
@@ -16,6 +17,7 @@ export default function LocationPage() {
       <Header />
       <LocationHero />
       <MapSection />
+      <LocationSection />
       <NearbyLandmarks />
       <LocationHighlights />
       <CommercialSpaces />

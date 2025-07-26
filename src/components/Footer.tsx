@@ -8,12 +8,10 @@ import { navigationLinks, contactDetails, socialLinks } from "@/data/footerData"
 const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white relative overflow-hidden">
-      {/* Top Gold Line */}
+
       <div className="w-full h-1 bg-color-light-orange"></div>
 
-      {/* Main Footer Grid */}
       <div className="container mx-auto px-4 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center lg:text-left">
-        {/* Column 1: Project Info */}
         <div className="space-y-6 m-auto">
           <div>
             <h2 className="text-3xl font-bold font-playfair text-white mb-2">
@@ -24,8 +22,6 @@ const Footer: React.FC = () => {
               THE CLASSIC RESIDENCE
             </p>
           </div>
-
-          {/* Address */}
           <div>
             <h3 className="font-bold text-lg text-color-light-orange mb-2">SITE ADDRESS</h3>
             <div className="flex items-start justify-center md:justify-start space-x-3">
@@ -34,8 +30,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Column 2: Navigation Links */}
         <div className="space-y-6 m-auto">
           <h3 className="font-bold text-lg text-color-light-orange mb-2">LINKS</h3>
           <nav className="flex flex-col items-center md:items-start space-y-2">
@@ -43,7 +37,7 @@ const Footer: React.FC = () => {
               <Link
                 key={index}
                 href={link.href}
-                className="text-white/80 hover:bg-color-orange transition text-sm"
+                className="text-white/80 hover:text-[#f93] transition text-sm"
               >
                 {link.title}
               </Link>

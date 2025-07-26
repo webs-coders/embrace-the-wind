@@ -1,4 +1,5 @@
 "use client";
+
 import { commercialBrands } from "@/data/locationPageData";
 import { Card, CardHeader } from "@nextui-org/react";
 import { ShoppingBag } from "lucide-react";

@@ -36,7 +36,7 @@ const HeroSection = () => {
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative h-[70vh] md:h-[100vh] overflow-hidden">
       {/* Background Slides */}
       <div className="absolute inset-0 w-full h-full">
         {slides.map((s, i) => (
@@ -56,9 +56,9 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/80 z-0" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center min-h-screen px-4 container mx-auto">
+      <div className="relative z-10 flex items-center justify-center text-center h-[70vh] md:h-[100vh] px-4 ">
         <div className="max-w-4xl mx-auto space-y-6 transition-opacity duration-1000 ease-in-out">
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white !leading-[1.3] ">
+          <h1 className="text-2xl md:text-5xl font-bold text-white !leading-[1.3] ">
             {slide.title}
             <span className="block text-transparent bg-clip-text bg-color-orange">
               {slide.title1}
