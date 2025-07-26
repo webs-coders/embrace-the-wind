@@ -38,9 +38,14 @@ export default function GalleryPage() {
     <div className="min-h-screen bg-white text-black">
       <Header />
       {/* Hero Section */}
-      <section className="relative h-[70vh] sm:h-[70vh] md:h-[100vh] w-full bg-cover bg-center bg-[url('/ResizedImages/EMBRACE_THE_WIND_29.jpg')]">
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-white text-2xl md:text-5xl font-bold">Gallery</h1>
+      <section className="relative h-[70vh] sm:h-[70vh] md:h-[100vh] w-full bg-cover bg-center bg-[url('/ResizedImages/EMBRACE_THE_WIND_07.jpg')]">
+        <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center px-4 text-center">
+          <h1 className="text-white text-2xl md:text-5xl font-bold drop-shadow-xl leading-tight max-w-4xl">
+            Gallery
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg text-white/80">
+            Take a visual tour of elegant spaces and inspiring lifestyle moments.
+          </p>
         </div>
       </section>
 
