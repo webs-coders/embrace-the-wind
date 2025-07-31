@@ -7,17 +7,11 @@ import AmenitiesGallery from "@/components/AmenitiesGallery";
 import Footer from "@/components/Footer";
 import { galleryImages } from "@/data/galleryData";
 import Image from "next/image";
-import Masonry from 'react-masonry-css';
 import GalleryGrid from "@/components/GalleryGrid";
 
 export default function GalleryPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const openModal = (index: number) => {
-    setCurrentIndex(index);
-    setIsOpen(true);
-  };
 
   const closeModal = () => {
     setIsOpen(false);
