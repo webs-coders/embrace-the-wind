@@ -25,7 +25,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-gray-100 p-6 rounded-2xl shadow-xl transition-all duration-300 ease-in-out"
+      className="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-gray-200 max-w-3xl mx-auto"
     >
       {!isSubmitting && !submitted && (
         <h3 className="text-2xl font-bold mb-6 text-gray-800">
@@ -54,7 +54,8 @@ const ContactForm = () => {
         </div>
       ) : (
         <>
-          <input
+          <div className='flex gap-8 mb-2'>
+            <input
             type="text"
             name="name"
             placeholder="Your Name"
@@ -74,6 +75,7 @@ const ContactForm = () => {
             className="w-full p-2 mb-1 border border-gray-300 rounded"
             required
           />
+          </div>
           {errors.phone && <p className="text-red-600 text-sm mb-2">{errors.phone}</p>}
 
           <input
@@ -82,7 +84,7 @@ const ContactForm = () => {
             placeholder="Your Email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-2 mb-1 border border-gray-300 rounded"
+            className="w-full p-2 mb-1 border border-gray-300 rounded mb-2"
             required
           />
           {errors.email && <p className="text-red-600 text-sm mb-2">{errors.email}</p>}
@@ -104,7 +106,7 @@ const ContactForm = () => {
         </>
       )}
 
-      <p className="w-full py-4 text-xs text-center mt-4 text-gray-500">
+      <p className="w-full py-4 text-xs text-center mt-2 text-gray-500">
         Your information is safe with us.
       </p>
     </form>

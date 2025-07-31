@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import { galleryImages } from "@/data/galleryData";
 import Image from "next/image";
 import Masonry from 'react-masonry-css';
+import GalleryGrid from "@/components/GalleryGrid";
 
 export default function GalleryPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,39 +51,9 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
-            Our Gallery
-          </h2>
-          <Masonry
-            breakpointCols={{
-              default: 2,
-              1100: 2,
-              700: 1,
-            }}
-            className="flex gap-6"
-            columnClassName="masonry-column"
-          >
-            {galleryImages.map((image, index) => (
-              <div
-                key={index}
-                className="mb-6 cursor-pointer overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-500"
-                onClick={() => openModal(index)}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={600}
-                  height={0} // set to 0 to allow dynamic height
-                  sizes="(max-width: 768px) 100vw, 600px"
-                  loading="lazy"
-                  quality={75}
-                  className="w-full h-auto rounded-xl transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-            ))}
-          </Masonry>
+          <GalleryGrid />
         </div>
       </section>
 

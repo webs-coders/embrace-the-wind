@@ -39,6 +39,12 @@ export type ProjectAddress = {
 export const nearbyPlaces: NearbyPlace[] = [
   {
     icon: School,
+    name: "Primary School",
+    distance: "1.4 km",
+    type: "Education",
+  },
+  {
+    icon: School,
     name: "PDPU University",
     distance: "9.9 km",
     type: "Education",
@@ -50,29 +56,24 @@ export const nearbyPlaces: NearbyPlace[] = [
     type: "Healthcare",
   },
   {
+    icon: Hospital,
+    name: "City Hospital",
+    distance: "18 km",
+    type: "Healthcare",
+  },
+  {
     icon: ShoppingBag,
     name: "Infocity Mall",
     distance: "2.3 km",
     type: "Shopping",
   },
   {
-    icon: Train,
-    name: "Gandhinagar Railway Station",
-    distance: "5.9 km",
-    type: "Transport",
+    icon: ShoppingBag,
+    name: "Palladium Mall",
+    distance: "20 km",
+    type: "Shopping",
   },
-  {
-    icon: Car,
-    name: "S.G. Highway",
-    distance: "0.1 km",
-    type: "Connectivity",
-  },
-  {
-    icon: Plane,
-    name: "Ahmedabad Airport",
-    distance: "17 km",
-    type: "Transport",
-  },
+  
 ];
 
 export const connectivityFeatures: ConnectivityFeature[] = [

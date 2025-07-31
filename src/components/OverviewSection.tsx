@@ -85,7 +85,7 @@ const OverviewSection: React.FC = () => {
             <h2 className="font-playfair text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 leading-tight">
               Elegance at Every Corner!{" "}
               <span className="block text-color-orange">
-                World-Class lifestyles!
+                World-Class Life Style!
               </span>
             </h2>
 
