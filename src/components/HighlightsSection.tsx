@@ -9,11 +9,8 @@ import {
   landscapeDescription2,
   landscapeTitle3,
   landscapeDescription3,
-  landscapeFeatures2,
-  landscapeFeatures3,
-  landscapeImage,
-  landscapeImage1,
 } from "@/data/amenitiesData";
+import LandscapeSection from "./LandscapeSection";
 
 const fadeInFrom = (direction: "left" | "right") => ({
   initial: { opacity: 0, x: direction === "left" ? -50 : 50 },
@@ -36,93 +33,73 @@ export default function HighlightsSection() {
       image: landscapeSectionImagesHomePage.renderImage,
       contentLeft: false,
     },
-    {
-      title: "Dedicated Lifts for Every Wing",
-      descriptions: landscapeFeatures2,
-      image: landscapeImage,
-      isList: true,
-      contentLeft: true,
-    },
-    {
-      title: "Freedom to Park, Freelys",
-      descriptions: landscapeFeatures3,
-      image: landscapeImage1,
-      isList: true,
-      contentLeft: false,
-    },
   ];
 
   return (
-    <section className="py-20 px-4 md:px-20 space-y-24 bg-white">
-      {sections.map((section, index) => {
-        const imageFirst = !section.contentLeft;
+    <>
+      <section className="py-20 px-4 md:px-20 space-y-24">
+        {sections.map((section, index) => {
+          const imageFirst = !section.contentLeft;
 
-        return (
-          <div
-            key={index}
-            className="grid md:grid-cols-2 gap-12 items-center"
-          >
-            {/* Image */}
-            {imageFirst && (
-              <motion.div {...fadeInFrom("left")}>
-                <Image
-                  src={section.image}
-                  alt={section.title}
-                  width={600}
-                  height={400}
-                  className="rounded-2xl object-cover shadow-md"
-                />
-              </motion.div>
-            )}
-
-            {/* Text or List */}
-            <motion.div
-              className="space-y-4"
-              {...fadeInFrom(imageFirst ? "right" : "left")}
+          return (
+            <div
+              key={index}
+              className="grid md:grid-cols-2 gap-12 items-center"
             >
-              <h2 className="text-3xl font-bold text-gray-900 pb-6">{section.title}</h2>
-              {section.isList ? (
-                <ul className="list-disc list-inside text-gray-700 space-y-2">
-                  {section.descriptions.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-              ) : (
+              {imageFirst && (
+                <motion.div {...fadeInFrom("left")}>
+                  <Image
+                    src={section.image}
+                    alt={section.title}
+                    width={600}
+                    height={400}
+                    className="rounded-2xl object-cover shadow-md"
+                  />
+                </motion.div>
+              )}
+              <motion.div
+                className="space-y-4"
+                {...fadeInFrom(imageFirst ? "right" : "left")}
+              >
+                <h2 className="text-3xl font-bold text-gray-900 pb-6">
+                  {section.title}
+                </h2>
                 <ul className="list-disc list-inside text-gray-600 space-y-2">
                   <ul className="space-y-2 text-sm text-gray-600 list-disc list-inside">
                     {section.descriptions.map((item, i) => {
                       const isTitle = item.startsWith("- ");
                       return isTitle ? (
-                        <div key={i} className="font-bold text-gray-800 text-lg">
+                        <div
+                          key={i}
+                          className="font-bold text-gray-800 text-lg"
+                        >
                           {item.replace("- ", "")}
                         </div>
                       ) : (
-                        <div key={i} className="pb-4 text-[16spx]">
+                        <div key={i} className="pb-4 text-[18px]">
                           {item}
                         </div>
                       );
                     })}
                   </ul>
-
                 </ul>
-              )}
-            </motion.div>
-
-            {/* Image (if contentLeft) */}
-            {!imageFirst && (
-              <motion.div {...fadeInFrom("right")}>
-                <Image
-                  src={section.image}
-                  alt={section.title}
-                  width={600}
-                  height={400}
-                  className="rounded-2xl w-full object-cover shadow-md"
-                />
               </motion.div>
-            )}
-          </div>
-        );
-      })}
-    </section>
+              {!imageFirst && (
+                <motion.div {...fadeInFrom("right")}>
+                  <Image
+                    src={section.image}
+                    alt={section.title}
+                    width={600}
+                    height={400}
+                    className="rounded-2xl w-full object-cover shadow-md"
+                  />
+                </motion.div>
+              )}
+            </div>
+          );
+        })}
+      </section>
+      <LandscapeSection />
+    </>
   );
 }
