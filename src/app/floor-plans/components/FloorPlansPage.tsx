@@ -1,6 +1,10 @@
-// data/floorPlanData.ts
+"use client";
 
-const legendItems = [
+import React from "react";
+import Image from "next/image";
+import { Circle } from "lucide-react";
+
+const legends = [
   "Security Cabin",
   "Entry Plaza With Trees And Water Feature",
   "Signage Wall With Plantation, Gate And Boom Gate",
@@ -57,16 +61,42 @@ const legendItems = [
   "Swing Plaza Outside Individual Block Entry"
 ];
 
-const floorPlanData = [
-  {
-    id: "master",
-    label: "Master Plan",
-    image: "/images/floor-plans/master-plan.png",
-    legend: legendItems.map((label) => ({
-      label,
-      icon: "Circle"
-    }))
-  }
-];
+const FloorPlanPage = () => {
+  return (
+    <main className="w-full py-16 px-4 bg-gradient-to-br from-gray-50 to-white min-h-screen">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-4xl font-bold mb-10 text-center text-primary">Master Floor Plan</h1>
 
-export default floorPlanData;
+        <div className="relative w-full aspect-[16/9] max-h-[800px] overflow-hidden rounded-2xl border-2 border-gray-200 shadow-lg mb-14">
+          <Image
+            src='/assets/1.jpg'
+            alt="Master Plan"
+            layout="fill"
+            objectFit="contain"
+            className="rounded-2xl"
+          />
+        </div>
+
+        <h2 className="text-3xl font-semibold mb-6 text-center">Legend (54 Items)</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          {legends.map((label, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-3 p-4 rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition hover:scale-[1.01]"
+            >
+              <div className="w-6 h-6 flex items-center justify-center bg-primary/10 rounded-full">
+                <Circle size={16} className="text-primary" />
+              </div>
+              <div className="text-gray-700 text-sm leading-snug">
+                <span className="font-medium text-gray-900">{String(i + 1).padStart(2, "0")}.</span> {label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </main>
+  );
+};
+
+export default FloorPlanPage;
