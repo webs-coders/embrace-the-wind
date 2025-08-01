@@ -1,4 +1,5 @@
-import { Droplets,
+import {
+  Droplets,
   Target,
   Dumbbell,
   Sparkles,
@@ -19,7 +20,7 @@ import { Droplets,
   Sun,
   MoveRight,
   ParkingCircle
- } from "lucide-react";
+} from "lucide-react";
 
 export const mainAmenities = [
   {
@@ -107,12 +108,30 @@ export const landscapeFeatures: string[] = [
   "Raised garden beds with rich, thick planting for a lush look",
 ];
 
+export const landscapeFeatures2: string[] = [
+  "Each block features 4 private lifts.",
+  "No waiting, no crowding—just smooth access.",
+  "Designed for comfort, privacy, and ease.",
+];
+
+export const landscapeFeatures3: string[] = [
+  "Enjoy 2 or 3 complimentary parking slots per unit.",
+  "More space, less stress—because convenience should never cost extra.",
+  "Thoughtfully planned to welcome you home effortlessly.",
+];
+
 export const landscapeImage = "/ResizedImages/EMBRACE_THE_WIND_05.jpg"; // relative path
+export const landscapeImage1 = "/ResizedImages/EMBRACE_THE_WIND_07.jpg"; // relative path
 
 
 export const landscapeSectionImages = {
   planImage: "/ResizedImages/EMBRACE_THE_WIND_14.jpg",
   renderImage: "/ResizedImages/EMBRACE_THE_WIND_10.jpg",
+};
+
+export const landscapeSectionImagesHomePage = {
+  planImage: "/ResizedImages/EMBRACE_THE_WIND_15.jpg",
+  renderImage: "/ResizedImages/EMBRACE_THE_WIND_12.jpg",
 };
 
 export const landscapeTitle = [
@@ -129,4 +148,29 @@ export const landscapeTitle1 = [
 export const landscapeDescription1 = [
   "At Embrace The Wind, creativity finds its canvas in every corner.",
   "Mural walls, sculptural elements, and themed installations turn everyday surroundings into vibrant visual experiences, adding charm, culture, and inspiration to your daily routine.",
+];
+
+export const landscapeTitle2 = [
+  "Why Embrace The Wind Leaves an Impression",
+];
+export const landscapeDescription2 = [
+  "- Only 20 Floors in Its Pocket",
+  "A rare vertical icon that rises above the skyline, offering unobstructed views and exclusivity.",
+  "- Strategic S.G. Highway Location",
+  "Effortless connectivity, calm surroundings, and proximity to everything that matters.",
+  "- Personal Patio & Spacious Balcony",
+  "Dual outdoor spaces that extend your lifestyle—morning chai, golden hour, or quiet reflection.",
+  "- Room Height of 10.25 Ft.",
+  "Generous vertical volume for light-filled interiors and a sense of spacious elegance.",
+];
+
+export const landscapeTitle3 = [
+];
+export const landscapeDescription3 = [
+  "- Exciting. Thrilling. Sensational.",
+  "This isn’t just a high-rise—it’s a high-life",
+  "- Comprehensive Amenities Suite",
+  "Swim, play, celebrate, gather, recharge. From indoor games to amphitheatre evenings, every corner serves your mood.",
+  "- Modern Clubhouse & Wellness Zones",
+  "Gym, movie lounge, toddler’s playroom, banquet hall and more—crafted for holistic living.",
 ];

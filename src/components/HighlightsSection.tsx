@@ -4,13 +4,15 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import {
-  landscapeSectionImages,
-  landscapeTitle,
-  landscapeDescription,
-  landscapeTitle1,
-  landscapeDescription1,
-  landscapeFeatures,
+  landscapeSectionImagesHomePage,
+  landscapeTitle2,
+  landscapeDescription2,
+  landscapeTitle3,
+  landscapeDescription3,
+  landscapeFeatures2,
+  landscapeFeatures3,
   landscapeImage,
+  landscapeImage1,
 } from "@/data/amenitiesData";
 
 const fadeInFrom = (direction: "left" | "right") => ({
@@ -23,23 +25,30 @@ const fadeInFrom = (direction: "left" | "right") => ({
 export default function HighlightsSection() {
   const sections = [
     {
-      title: landscapeTitle[0],
-      descriptions: landscapeDescription,
-      image: landscapeSectionImages.planImage,
+      title: landscapeTitle2[0],
+      descriptions: landscapeDescription2,
+      image: landscapeSectionImagesHomePage.planImage,
       contentLeft: true,
     },
     {
-      title: landscapeTitle1[0],
-      descriptions: landscapeDescription1,
-      image: landscapeSectionImages.renderImage,
+      title: landscapeTitle3[0],
+      descriptions: landscapeDescription3,
+      image: landscapeSectionImagesHomePage.renderImage,
       contentLeft: false,
     },
     {
-      title: "Landscape Features",
-      descriptions: landscapeFeatures,
+      title: "Dedicated Lifts for Every Wing",
+      descriptions: landscapeFeatures2,
       image: landscapeImage,
       isList: true,
       contentLeft: true,
+    },
+    {
+      title: "Freedom to Park, Freelys",
+      descriptions: landscapeFeatures3,
+      image: landscapeImage1,
+      isList: true,
+      contentLeft: false,
     },
   ];
 
@@ -61,7 +70,7 @@ export default function HighlightsSection() {
                   alt={section.title}
                   width={600}
                   height={400}
-                  className="rounded-2xl w-full object-cover shadow-md"
+                  className="rounded-2xl object-cover shadow-md"
                 />
               </motion.div>
             )}
@@ -71,19 +80,31 @@ export default function HighlightsSection() {
               className="space-y-4"
               {...fadeInFrom(imageFirst ? "right" : "left")}
             >
-              <h2 className="text-3xl font-bold text-gray-900">{section.title}</h2>
+              <h2 className="text-3xl font-bold text-gray-900 pb-6">{section.title}</h2>
               {section.isList ? (
-                <ul className="list-disc list-inside text-gray-700 space-y-2 text-lg">
+                <ul className="list-disc list-inside text-gray-700 space-y-2">
                   {section.descriptions.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}
                 </ul>
               ) : (
-                section.descriptions.map((para: string, i: number) => (
-                  <p key={i} className="text-gray-600 text-lg">
-                    {para}
-                  </p>
-                ))
+                <ul className="list-disc list-inside text-gray-600 space-y-2">
+                  <ul className="space-y-2 text-sm text-gray-600 list-disc list-inside">
+                    {section.descriptions.map((item, i) => {
+                      const isTitle = item.startsWith("- ");
+                      return isTitle ? (
+                        <div key={i} className="font-bold text-gray-800 text-lg">
+                          {item.replace("- ", "")}
+                        </div>
+                      ) : (
+                        <div key={i} className="pb-4 text-[16spx]">
+                          {item}
+                        </div>
+                      );
+                    })}
+                  </ul>
+
+                </ul>
               )}
             </motion.div>
 

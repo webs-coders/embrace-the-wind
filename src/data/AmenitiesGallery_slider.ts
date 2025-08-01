@@ -44,47 +44,47 @@ export const amenitySlides: AmenitySlide[] = [
     id: "05",
     title: "Resort-Style Dual Swimming Pools",
     description:
-      "Two exclusive pools—one for laps, another for leisure—create a dynamic escape for residents",
+      "Two exclusive pools—one for laps, another for leisure—create a dynamic escape for residents.",
     image:
       "/ResizedImages/EMBRACE_THE_WIND_06.jpg",
   },
   {
     id: "06",
-    title: "home theater",
+    title: "Mini Theatre",
     description:
-      "Elegant kitchens feature polished granite counters, vitrified tile backsplashes, smart layouts, a wash yard, and a dedicated store room for everyday ease.",
+      "Settle into cinematic comfort with plush seating and curated screenings—where every movie night feels like a private premiere.",
     image:
       "/ResizedImages/EMBRACE_THE_WIND_27.jpg",
   },
   {
     id: "07",
-    title: "Indoor swimming pool",
+    title: "Leisure-Style Swimming Pool",
     description:
-      "The 4BHK penthouses redefine luxury with expansive terraces (up to 685 sq ft), signature glass bridges, and exclusive lounge spaces designed to impress.",
+      "A tranquil oasis designed to unwind, energize, or simply float away—with sunlit decks and soothing water features.",
     image:
       "/ResizedImages/EMBRACE_THE_WIND_28.jpg",
   },
   {
     id: "08",
-    title: "Gym",
+    title: "Modern Fitness Studio",
     description:
-      "Two exclusive pools—one for laps, another for leisure—create a dynamic escape for residents",
+      "Sculpted for motivation, the gym features high-tech equipment and energizing interiors that support every strength and sweat session.",
     image:
       "/ResizedImages/EMBRACE_THE_WIND_25.jpg",
   },
    {
     id: "09",
-    title: "Play Zone",
+    title: "Children’s Play Area",
     description:
-      "Two exclusive pools—one for laps, another for leisure—create a dynamic escape for residents",
+      "Vibrant, safe, and full of discovery—this playful zone blends adventure with comfort to spark joy across all ages.",
     image:
       "/ResizedImages/EMBRACE_THE_WIND_11.jpg",
   },
   {
     id: "10",
-    title: "Yoga",
+    title: "Yoga & Wellness",
     description:
-      "Two exclusive pools—one for laps, another for leisure—create a dynamic escape for residents",
+      "A quiet, peaceful room designed for calm moments, gentle stretches, and personal time to relax and recharge.",
     image:
       "/ResizedImages/EMBRACE_THE_WIND_22.jpg",
   },

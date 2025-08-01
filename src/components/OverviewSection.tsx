@@ -102,10 +102,10 @@ const OverviewSection: React.FC = () => {
             >
               <div className="relative pl-4 border-l-4 border-color-orange">
                 <h3 className="font-playfair text-2xl sm:text-3xl font-semibold text-slate-800 leading-snug">
-                  You Won’t Believe Your Eyes
+                  You Deserve More Than a Home!
                 </h3>
                 <p className="mt-2 text-sm sm:text-base italic text-slate-500">
-                  From admiring the skyline to living in it.
+                  You Deserve a Landmark of Luxury!
                 </p>
               </div>
 
