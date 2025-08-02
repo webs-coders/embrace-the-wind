@@ -82,7 +82,7 @@ const specificationsData = [
     image: "/images/elevator.jpg",
     items: [
       { details: "Branded automatic lifts (Kone / Schindler) with full power backup" },
-      { details: "Four lifts per block, including a dedicated service lift" },
+      { details: "4 lifts per block, including a dedicated service lift" },
       { details: "Safety-enabled with the Automatic Rescue Device (ARD) system" },
     ],
   },
