@@ -40,7 +40,7 @@ const LandscapeSection = () => {
               {landscapeFeatures2.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="w-2 h-2 mt-3 mr-4 bg-color-light-orange rounded-full shrink-0" />
-                  <span className="text-[18px] text-black leading-relaxed">
+                  <span className="text-[18px] text-black leading-relaxed text-left">
                     {feature}
                   </span>
                 </li>
@@ -75,7 +75,7 @@ const LandscapeSection = () => {
               {landscapeFeatures3.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="w-2 h-2 mt-3 mr-4 bg-color-light-orange rounded-full shrink-0" />
-                  <span className="text-[18px] text-black leading-relaxed">
+                  <span className="text-[18px] text-black leading-relaxed text-left">
                     {feature}
                   </span>
                 </li>
