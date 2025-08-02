@@ -4,7 +4,8 @@ import Header from "@/components/Header";
 import SocialSidebar from "@/components/SocialSidebar";
 import AmenitiesGallery from "@/components/AmenitiesGallery";
 import Footer from "@/components/Footer";
-import FloorPlanPage from "./components/FloorPlansPage";
+// import FloorPlanPage from "./components/FloorPlansPage";
+import FloorPlansPage from "./components/floor-plans";
 
 export default function AmenitiesPage() {
   return (
@@ -21,7 +22,8 @@ export default function AmenitiesPage() {
       </section>
 
       {/* Play Area Section */}
-     <FloorPlanPage/>
+     <FloorPlansPage/>
+  
 
       {/* Amenities Gallery */}
       <AmenitiesGallery />

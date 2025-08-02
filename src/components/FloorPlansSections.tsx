@@ -1,175 +1,171 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
-import { Tabs, Tab } from "@nextui-org/react";
-import { Circle } from "lucide-react";
+import { useState } from "react";
+import { Download, X, ChevronLeft, ChevronRight } from "lucide-react";
+import clsx from "clsx";
+import LegendSection from "./LegendSection";
 
-// Floor Plan Tabs with real image filenames (you'll need to rename accordingly in /public/assets)
-const floorTabs = [
-  {
-    id: "master",
-    label: "Master Plan",
-    image: "/assets/ground-plan.jpg", // Rename your master plan image to this
-  },
-  {
-    id: "typical-floor",
-    label: "Typical Floor Plan",
-    image: "/assets/typical-floor.jpg",
-  },
-  {
-    id: "3bhk",
-    label: "3 BHK Plans",
-    images: [
-      { block: "Block A", src: "/assets/3bhk-a.jpg" },
-      { block: "Block B", src: "/assets/3bhk-b.jpg" },
-      { block: "Block C&D", src: "/assets/3bhk-cd.jpg" },
-      { block: "Block E", src: "/assets/3bhk-e.jpg" },
-    ],
-  },
-  {
-    id: "4bhk",
-    label: "4 BHK Plans",
-    images: [
-      { block: "Block A", src: "/assets/4bhk-a.jpg" },
-      { block: "Block C&D", src: "/assets/4bhk-cd.jpg" },
-    ],
-  },
-  {
-    id: "penthouse",
-    label: "Penthouse Plans",
-    images: [
-      { block: "Block A (Lower)", src: "/assets/penthouse-a-lower.jpg" },
-      { block: "Block A (Upper)", src: "/assets/penthouse-a-upper.jpg" },
-      { block: "Block B (Lower)", src: "/assets/penthouse-b-lower.jpg" },
-      { block: "Block B (Upper)", src: "/assets/penthouse-b-upper.jpg" },
-      { block: "Block C&D (Lower)", src: "/assets/penthouse-cd-lower.jpg" },
-      { block: "Block C&D (Upper)", src: "/assets/penthouse-cd-upper.jpg" },
-      { block: "Block E2 (Lower)", src: "/assets/penthouse-e2-lower.jpg" },
-      { block: "Block E2 (Upper)", src: "/assets/penthouse-e2-upper.jpg" },
-    ],
-  },
+const allPlans = [
+  { src: "/floor/floor1.jpg", alt: "1st & Typical Floor Plan", type: "3BHK" },
+  { src: "/floor/floor2.jpg", alt: "3BHK & 4BHK - Block A & B", type: "4BHK" },
+  { src: "/floor/floor3.jpg", alt: "3BHK - Block C, D & E", type: "3BHK" },
+  { src: "/floor/floor4.jpg", alt: "18th & 19th Floor Plan", type: "3BHK" },
+  { src: "/floor/floor5.jpg", alt: "4BHK Penthouse - Block A", type: "Penthouse" },
+  { src: "/floor/floor6.jpg", alt: "4BHK Penthouse - Block B", type: "Penthouse" },
+  { src: "/floor/floor7.jpg", alt: "4BHK Penthouse - Block C & D", type: "Penthouse" },
+  { src: "/floor/floor8.jpg", alt: "3BHK Penthouse - Block E1", type: "Penthouse" },
+  { src: "/floor/floor9.jpg", alt: "4BHK Penthouse - Block E2", type: "Penthouse" },
 ];
 
-const legends: string[] = [
-  "Security Cabin",
-  "Entry Plaza With Trees And Water Feature",
-  "Signage Wall With Plantation, Gate And Boom Gate",
-  "Entrance Foyer With Seating Area",
-  "Pickup / Drop Off Zone With Benches And M.S Trellis",
-  "Senior Citizen Indoor Sitout Area",
-  "Sculpture Garden - Rock Sculptures Amidst Gravel Bed With Potted Plants And Benches",
-  "Theme Wall With Raised Planter",
-  "Cop-Plaza Area With Stone Crete And Granite Stone Flooring",
-  "Entry Plaza With Sculpture",
-  "Woodwalk - Meandering Walkway In Stone Crete Along Densely Planted Area",
-  "Raised Planters With Dense Planting",
-  "Water Body With Sculpture",
-  "Seating Pavilions With M.S Trellis",
-  "Mother's Sit Out Area",
-  "Children's Play Area",
-  "Outdoor Exercise Area",
-  "Sand Pit",
-  "Play Mound",
-  "Kids Pool",
-  "Swimming Pool",
-  "Changing Rooms And Toilet",
-  "Pool Deck With Sundowner",
-  "Yoga Studio",
-  "Block Entrance Lounges With Seating",
-  "Multipurpose Play Court",
-  "Floor Game Zone With Sitout Area",
-  "Indoor Kids / Toddler's Play Area",
-  "Indoor Game Zone",
-  "Library & Work From Home Lounge",
-  "Indoor Swimming Pool With Deck Area And Changing Room",
-  "Gymnasium",
-  "Common Male Toilets",
-  "Common Female Toilets",
-  "Society Store",
-  "Banquet Hall",
-  "Kitchen & Wash Area",
-  "Indoor Theatre",
-  "Jhula Plaza",
-  "Block B - Entrance Plaza With Planting Clusters And Sitout Zone",
-  "Box Cricket",
-  "Cycle Parking Zones",
-  "Arrival Plaza With Granite Flooring",
-  "Driveway With Trimix Flooring",
-  "Garbage Collection Area",
-  "Commercial Frontage With Tree Plantation",
-  "Commercial Entry Zones With Planting",
-  "Signage Corner With Sculpture And Plantation",
-  "Walking Skybridge Overlooking The Landscape",
-  "Viewing Balconies With Rain Showers Below",
-  "Drivers Waiting Area",
-  "Society Office",
-  "Mural Wall As Backdrop Of Swimming Pool Plaza",
-  "Swing Plaza Outside Individual Block Entry"
-];
+const filters = ["All", "3BHK", "4BHK", "Penthouse"];
 
-const FloorPlansSection = () => {
+export default function FloorPlansSection() {
+  const [activeFilter, setActiveFilter] = useState("All");
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const filteredPlans =
+    activeFilter === "All"
+      ? allPlans
+      : allPlans.filter((plan) => plan.type === activeFilter);
+
+  const selectedImage =
+    selectedIndex !== null ? filteredPlans[selectedIndex] : null;
+
+  const handleNext = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex + 1) % filteredPlans.length);
+    }
+  };
+
+  const handlePrev = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex(
+        (selectedIndex - 1 + filteredPlans.length) % filteredPlans.length
+      );
+    }
+  };
+
   return (
-    <section className="w-full py-16 px-4 bg-gray-50" id="floor-plans">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">Floor Plans</h2>
+    <section className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-10">Floor Plans</h2>
 
-        <Tabs variant="underlined" aria-label="Floor Plans Tabs" className="mb-10">
-          {floorTabs.map((tab) => (
-            <Tab key={tab.id} title={tab.label}>
-              {tab.image && (
-                <div className="relative w-full aspect-[16/9] overflow-hidden rounded-xl shadow-md border bg-white">
-                  <Image
-                    src={tab.image}
-                    alt={tab.label}
-                    layout="fill"
-                    objectFit="contain"
-                    className="rounded-lg"
-                  />
-                </div>
+        {/* Filters */}
+        <div className="flex justify-center gap-4 mb-10 flex-wrap">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              className={clsx(
+                "px-4 py-2 rounded-full border text-sm font-medium transition",
+                activeFilter === filter
+                  ? "bg-black text-white"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               )}
-
-              {tab.images && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                  {tab.images.map((plan, index) => (
-                    <div
-                      key={index}
-                      className="relative w-full aspect-[4/3] overflow-hidden rounded-xl border shadow bg-white"
-                    >
-                      <Image
-                        src={plan.src}
-                        alt={plan.block}
-                        layout="fill"
-                        objectFit="contain"
-                        className="rounded-lg"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-center py-2 text-sm font-medium">
-                        {plan.block}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {tab.id === "master" && (
-                <div className="mt-10 bg-white p-6 rounded-xl shadow-inner max-h-[600px] overflow-y-auto border">
-                  <h3 className="text-xl font-semibold mb-4">Legend (54)</h3>
-                  <ul className="space-y-2">
-                    {legends.map((label, index) => (
-                      <li key={index} className="flex items-start gap-2 text-sm">
-                        <Circle className="h-4 w-4 text-blue-500 mt-1" />
-                        <span className="text-gray-700">{`${index + 1}. ${label}`}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </Tab>
+              onClick={() => {
+                setActiveFilter(filter);
+                setSelectedIndex(null); // reset modal if filter changes
+              }}
+            >
+              {filter}
+            </button>
           ))}
-        </Tabs>
+        </div>
+
+        {/* Floor Plan Grid */}
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2">
+          {filteredPlans.map((plan, index) => (
+            <div
+              key={index}
+              className="rounded-xl overflow-hidden shadow group transition"
+            >
+              <div
+                className="cursor-pointer"
+                onClick={() => setSelectedIndex(index)}
+              >
+                <Image
+                  src={plan.src}
+                  alt={plan.alt}
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-contain rounded"
+                />
+              </div>
+              <div className="flex items-center justify-between px-4 py-3">
+                <p className="text-sm text-gray-600">{plan.alt}</p>
+                <a
+                  href={plan.src}
+                  download
+                  className="text-sm inline-flex items-center gap-1 px-4 py-2 bg-color-light-orange text-white hover:scale-105 shadow-md hover:bg-color-orange"
+                >
+                  <Download className="w-4 h-4" />
+                  Download
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+          <LegendSection/>
       </div>
+
+      {/* Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
+          onClick={() => setSelectedIndex(null)}
+        >
+          <div
+            className="relative w-full h-full max-h-screen overflow-auto flex justify-center items-center p-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              className="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2 hover:bg-black"
+              onClick={() => setSelectedIndex(null)}
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Prev Button */}
+            <button
+              onClick={handlePrev}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            {/* Next Button */}
+            <button
+              onClick={handleNext}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            <div className="max-w-4xl w-full mt-8">
+              <Image
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                width={1600}
+                height={1000}
+                className="w-full h-auto object-contain rounded"
+              />
+
+              <div className="text-center mt-4 px-2">
+                <p className="text-white text-sm mb-2">{selectedImage.alt}</p>
+                <a
+                  href={selectedImage.src}
+                  download
+                  className="inline-flex items-center gap-1 px-4 py-2 bg-color-light-orange text-white hover:scale-105 shadow-md hover:bg-color-orange"
+                >
+                  <Download className="w-4 h-4" />
+                  Download
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
-};
-
-export default FloorPlansSection;
+}
