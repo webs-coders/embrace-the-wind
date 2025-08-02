@@ -44,8 +44,48 @@ export const amenitySlides: AmenitySlide[] = [
     id: "05",
     title: "Resort-Style Dual Swimming Pools",
     description:
-      "Two exclusive pools—one for laps, another for leisure—create a dynamic escape for residents",
+      "Two exclusive pools—one for laps, another for leisure—create a dynamic escape for residents.",
     image:
       "/ResizedImages/EMBRACE_THE_WIND_06.jpg",
+  },
+  {
+    id: "06",
+    title: "Mini Theatre",
+    description:
+      "Settle into cinematic comfort with plush seating and curated screenings—where every movie night feels like a private premiere.",
+    image:
+      "/ResizedImages/EMBRACE_THE_WIND_27.jpg",
+  },
+  {
+    id: "07",
+    title: "Leisure-Style Swimming Pool",
+    description:
+      "A tranquil oasis designed to unwind, energize, or simply float away—with sunlit decks and soothing water features.",
+    image:
+      "/ResizedImages/EMBRACE_THE_WIND_28.jpg",
+  },
+  {
+    id: "08",
+    title: "Modern Fitness Studio",
+    description:
+      "Sculpted for motivation, the gym features high-tech equipment and energizing interiors that support every strength and sweat session.",
+    image:
+      "/ResizedImages/EMBRACE_THE_WIND_25.jpg",
+  },
+   {
+    id: "09",
+    title: "Children’s Play Area",
+    description:
+      "Vibrant, safe, and full of discovery—this playful zone blends adventure with comfort to spark joy across all ages.",
+    image:
+      "/ResizedImages/EMBRACE_THE_WIND_11.jpg",
+  },
+  {
+    id: "10",
+    title: "Yoga & Wellness",
+    description:
+      "A quiet, peaceful room designed for calm moments, gentle stretches, and personal time to relax and recharge.",
+    image:
+      "/ResizedImages/EMBRACE_THE_WIND_22.jpg",
   },
 ];

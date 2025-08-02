@@ -8,12 +8,10 @@ import { navigationLinks, contactDetails, socialLinks } from "@/data/footerData"
 const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white relative overflow-hidden">
-      {/* Top Gold Line */}
+
       <div className="w-full h-1 bg-color-light-orange"></div>
 
-      {/* Main Footer Grid */}
       <div className="container mx-auto px-4 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center lg:text-left">
-        {/* Column 1: Project Info */}
         <div className="space-y-6 m-auto">
           <div>
             <h2 className="text-3xl font-bold font-playfair text-white mb-2">
@@ -21,11 +19,9 @@ const Footer: React.FC = () => {
               <span className="ml-2 inline-block w-2 h-2 bg-color-orange rounded-full"></span>
             </h2>
             <p className="text-sm font-medium tracking-widest text-white/70">
-              THE CLASSIC RESIDENCE
+              3 & 4 BHK Redefing Life
             </p>
           </div>
-
-          {/* Address */}
           <div>
             <h3 className="font-bold text-lg text-color-light-orange mb-2">SITE ADDRESS</h3>
             <div className="flex items-start justify-center md:justify-start space-x-3">
@@ -34,8 +30,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Column 2: Navigation Links */}
         <div className="space-y-6 m-auto">
           <h3 className="font-bold text-lg text-color-light-orange mb-2">LINKS</h3>
           <nav className="flex flex-col items-center md:items-start space-y-2">
@@ -43,7 +37,7 @@ const Footer: React.FC = () => {
               <Link
                 key={index}
                 href={link.href}
-                className="text-white/80 hover:bg-color-orange transition text-sm"
+                className="text-white/80 hover:text-color-light-orange transition text-sm"
               >
                 {link.title}
               </Link>
@@ -60,7 +54,7 @@ const Footer: React.FC = () => {
             <div className="w-10 h-10 bg-[#FF6A00]/20 rounded-full flex items-center justify-center group-hover:bg-[#FF6A00]/30 transition">
               <Phone className="w-5 h-5 text-color-light-orange" />
             </div>
-            <a href={`tel:${contactDetails.phone}`} className="text-white hover:bg-color-orange text-sm font-semibold">
+            <a href={`tel:${contactDetails.phone}`} className="text-white hover:text-color-light-orange text-sm font-semibold">
               {contactDetails.phone}
             </a>
           </div>
@@ -70,7 +64,7 @@ const Footer: React.FC = () => {
             <div className="w-10 h-10 bg-[#FF6A00]/20 rounded-full flex items-center justify-center group-hover:bg-[#FF6A00]/30 transition">
               <Mail className="w-5 h-5 text-color-light-orange" />
             </div>
-            <a href={`mailto:${contactDetails.email}`} className="text-white hover:bg-color-orange text-sm font-semibold">
+            <a href={`mailto:${contactDetails.email}`} className="text-white hover:text-color-light-orange text-sm font-semibold">
               {contactDetails.email}
             </a>
           </div>
