@@ -6,7 +6,7 @@ interface SpecificationHeroProps {
 
 const SpecificationHero: React.FC<SpecificationHeroProps> = ({ isVisible }) => {
   return (
-    <section className="relative h-[70vh] sm:h-[70vh] md:h-[100vh] w-full bg-cover bg-center bg-[url('/ResizedImages/EMBRACE_THE_WIND_24.jpg')]">
+    <section className="relative h-[70vh] sm:h-[70vh] md:h-[100vh] w-full bg-cover bg-center bg-[url('/ResizedImages/EMBRACE_THE_WIND_08.jpg')]">
       <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center px-4">
         <h1
           className={`text-white text-2xl md:text-5xl font-extrabold font-playfair transition-all duration-1000 ${
