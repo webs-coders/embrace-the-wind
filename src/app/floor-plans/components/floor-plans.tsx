@@ -5,39 +5,71 @@ import { useState } from 'react';
 import { Download, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import LegendSection from '@/components/LegendSection';
 
+const TABS = ['All', 'Ground Floor', '3BHK & 4BHK', '18 & 19 Floor', 'Penthouse'] as const;
+type TabType = typeof TABS[number];
+
 const floorPlans = [
-  { src: '/floor/floor1.jpg', alt: '1st and Typical Floor Plan' },
-  { src: '/floor/floor2.jpg', alt: '3BHK & 4BHK Unit Plan - Block A & B' },
-  { src: '/floor/floor3.jpg', alt: '3BHK Unit Plan - Block C, D & E' },
-  { src: '/floor/floor4.jpg', alt: '18th & 19th Floor Plan' },
-  { src: '/floor/floor5.jpg', alt: '4BHK Penthouse - Block A' },
-  { src: '/floor/floor6.jpg', alt: '4BHK Penthouse - Block B' },
-  { src: '/floor/floor7.jpg', alt: '4BHK Penthouse - Block C & D' },
-  { src: '/floor/floor8.jpg', alt: '3BHK Penthouse - Block E1' },
-  { src: '/floor/floor9.jpg', alt: '4BHK Penthouse - Block E2' },
+  { src: '/floor/floor1.jpg', alt: '1st and Typical Floor Plan', category: 'Ground Floor' },
+  { src: '/floor/floor2.jpg', alt: '3BHK & 4BHK Unit Plan - Block A & B', category: '3BHK & 4BHK' },
+  { src: '/floor/floor3.jpg', alt: '3BHK Unit Plan - Block C, D & E', category: '3BHK & 4BHK' },
+  { src: '/floor/floor4.jpg', alt: '18th & 19th Floor Plan', category: '18 & 19 Floor'},
+  { src: '/floor/floor5.jpg', alt: '4BHK Penthouse - Block A', category: 'Penthouse, ' },
+  { src: '/floor/floor6.jpg', alt: '4BHK Penthouse - Block B', category: 'Penthouse' },
+  { src: '/floor/floor7.jpg', alt: '4BHK Penthouse - Block C & D', category: 'Penthouse' },
+  { src: '/floor/floor8.jpg', alt: '3BHK Penthouse - Block E1', category: 'Penthouse' },
+  { src: '/floor/floor9.jpg', alt: '4BHK Penthouse - Block E2', category: 'Penthouse' },
+  { src: '/floor/floor10.jpg', alt: 'Ground Floor', category: 'Ground Floor' },
+  
 ];
 
 export default function FloorPlansPage() {
+  const [activeTab, setActiveTab] = useState<TabType>('All');
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const selectedImage = selectedIndex !== null ? floorPlans[selectedIndex] : null;
+  const filteredPlans =
+    activeTab === 'All'
+      ? floorPlans
+      : floorPlans.filter(plan => plan.category === activeTab);
+
+  const selectedImage = selectedIndex !== null ? filteredPlans[selectedIndex] : null;
 
   const handleNext = () => {
     if (selectedIndex !== null) {
-      setSelectedIndex((selectedIndex + 1) % floorPlans.length);
+      setSelectedIndex((selectedIndex + 1) % filteredPlans.length);
     }
   };
 
   const handlePrev = () => {
     if (selectedIndex !== null) {
-      setSelectedIndex((selectedIndex - 1 + floorPlans.length) % floorPlans.length);
+      setSelectedIndex((selectedIndex - 1 + filteredPlans.length) % filteredPlans.length);
     }
   };
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
+      {/* Tabs */}
+      <div className="flex gap-4 mb-8 justify-center flex-wrap">
+        {TABS.map(tab => (
+          <button
+            key={tab}
+            onClick={() => {
+              setActiveTab(tab);
+              setSelectedIndex(null);
+            }}
+            className={`px-4 py-2 rounded-full border transition-all duration-150 ${
+              activeTab === tab
+                ? 'bg-color-light-orange text-white'
+                : 'bg-white text-black hover:bg-gray-100'
+            }`}
+          >
+            {tab}
+          </button>
+        ))}
+      </div>
+
+      {/* Grid */}
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
-        {floorPlans.map((plan, index) => (
+        {filteredPlans.map((plan, index) => (
           <div
             key={index}
             className="border rounded-lg shadow overflow-hidden flex flex-col"
@@ -69,7 +101,9 @@ export default function FloorPlansPage() {
           </div>
         ))}
       </div>
-      <LegendSection/>
+
+      <LegendSection />
+
       {/* Modal */}
       {selectedImage && (
         <div

@@ -158,7 +158,8 @@
 @layer utilities {
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
-  }
+    -webkit-animation: fadeInUp 0.8s ease-out forwards;
+}
   
   @keyframes fadeInUp {
     from {
@@ -326,4 +327,10 @@
 
 .animate-fade-blur {
   animation: fade-blur 1s ease forwards;
+}
+
+@media (max-width: 640px) {
+  html,body {
+    overflow-x: hidden !important;
+  }
 }
