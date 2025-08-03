@@ -59,7 +59,7 @@ const GallerySection = () => {
               >
                 <GalleryImage image={group[0]} />
               </div>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-12">
                 <div
                   className="rounded-3xl overflow-hidden shadow-lg cursor-pointer"
                   onClick={() => openModal(i + 1)}
@@ -76,7 +76,7 @@ const GallerySection = () => {
             </>
           ) : (
             <>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-12">
                 <div
                   className="rounded-3xl overflow-hidden shadow-lg cursor-pointer"
                   onClick={() => openModal(i)}

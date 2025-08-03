@@ -88,9 +88,18 @@ const Footer: React.FC = () => {
       {/* Bottom Bar */}
       <div className="border-t border-white/10 py-4">
         <div className="container mx-auto px-4 text-center text-sm text-white/60">
-          © 2025 Embrace The Wind
+          © 2025 Embrace The Wind &nbsp;|&nbsp;
+          Designed by <a
+            href="https://infinitydesignhub.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/70 hover:text-white underline transition-colors"
+          >
+            Infinity DesignHub
+          </a>
         </div>
       </div>
+
     </footer>
   );
 };

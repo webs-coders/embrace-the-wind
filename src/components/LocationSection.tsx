@@ -57,7 +57,7 @@ const LocationSection: React.FC = () => {
           <div className="relative h-[420px] w-full rounded-3xl overflow-hidden shadow-2xl">
             <iframe
               src={projectAddress.mapIframeSrc}
-              className="w-full h-full grayscale hover:grayscale-0 transition duration-500"
+              className="w-full h-full transition duration-500"
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
