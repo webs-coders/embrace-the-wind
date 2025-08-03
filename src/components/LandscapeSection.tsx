@@ -17,13 +17,13 @@ const LandscapeSection = () => {
             <Image
               src={landscapeImage}
               alt="Landscape Plan"
-              width={580}
+              width={550}
               height={500}
-              className="rounded-2xl object-cover shadow-md space-y-2 sm:space-y-0"
+              className="rounded-2xl h-[340px]"
             />
           </div>
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold text-gray-900 pt-4">
+            <h2 className="text-3xl font-bold text-gray-900 pb-2 pt-8">
               Dedicated Lifts for Every Wing
             </h2>
             <ul className="space-y-1">
@@ -43,13 +43,13 @@ const LandscapeSection = () => {
             <Image
               src={landscapeImage1}
               alt="Landscape Render"
-              width={580}
+              width={550}
               height={500}
-              className="rounded-2xl object-cover shadow-md space-y-2 sm:space-y-0"
+              className="rounded-2xl h-[340px]"
             />
           </div>
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold text-gray-900 pt-4">
+            <h2 className="text-3xl font-bold text-gray-900 pb-2 pt-8">
               Freedom to Park, Freely
             </h2>
             <ul className="space-y-1">

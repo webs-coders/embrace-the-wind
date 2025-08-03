@@ -11,8 +11,8 @@ export const contactInfo = {
 
 export const navItems = [
   { label: 'Overview', href: '/#overview' },
-  { label: 'Specifications', href: '/specifications', isPage: true },
   { label: 'Amenities', href: '/amenities' },
+  { label: 'Specifications', href: '/specifications', isPage: true },
   { label: 'Floor Plans', href: '/floor-plans' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Location', href: '/location' },

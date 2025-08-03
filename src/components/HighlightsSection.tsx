@@ -53,10 +53,10 @@ export default function HighlightsSection() {
               )}
 
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold text-gray-900 pb-4">
+                <h3 className="text-3xl font-bold text-gray-900 pb-4">
                   {section.title}
-                </h2>
-                <ul className="space-y-2">
+                </h3>
+                <ul className="space-y-1">
                   {section.descriptions.map((item, i) => {
                     const isTitle = item.startsWith("- ");
                     return isTitle ? (

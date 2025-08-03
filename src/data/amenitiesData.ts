@@ -120,8 +120,8 @@ export const landscapeFeatures3: string[] = [
   "Thoughtfully planned to welcome you home effortlessly.",
 ];
 
-export const landscapeImage = "/ResizedImages/EMBRACE_THE_WIND_05.jpg"; // relative path
-export const landscapeImage1 = "/ResizedImages/EMBRACE_THE_WIND_07.jpg"; // relative path
+export const landscapeImage = "/ResizedImages/lift.jpg"; // relative path
+export const landscapeImage1 = "/ResizedImages/basement.jpg"; // relative path
 
 
 export const landscapeSectionImages = {
