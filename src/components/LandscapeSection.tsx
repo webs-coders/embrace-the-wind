@@ -4,6 +4,8 @@ import Image from "next/image";
 import {
   landscapeImage,
   landscapeImage1,
+  landscapeImage2,
+
   landscapeFeatures2,
   landscapeFeatures3,
 } from "@/data/amenitiesData";
@@ -15,7 +17,7 @@ const LandscapeSection = () => {
         <div>
           <div>
             <Image
-              src={landscapeImage}
+              src={landscapeImage1}
               alt="Landscape Plan"
               width={550}
               height={500}
@@ -41,7 +43,7 @@ const LandscapeSection = () => {
         <div>
           <div>
             <Image
-              src={landscapeImage1}
+              src={landscapeImage2}
               alt="Landscape Render"
               width={550}
               height={500}

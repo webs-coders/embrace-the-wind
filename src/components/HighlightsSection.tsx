@@ -52,8 +52,8 @@ export default function HighlightsSection() {
                 </div>
               )}
 
-              <div className="space-y-4">
-                <h3 className="text-3xl font-bold text-gray-900 pb-4">
+              <div className="space-y-4 pl-8">
+                <h3 className="text-3xl font-bold text-gray-900">
                   {section.title}
                 </h3>
                 <ul className="space-y-1">
@@ -62,12 +62,12 @@ export default function HighlightsSection() {
                     return isTitle ? (
                       <div
                         key={i}
-                        className="font-bold text-gray-800 text-lg"
+                        className="font-bold text-gray-800 text-lg pt-3"
                       >
                         {item.replace("- ", "")}
                       </div>
                     ) : (
-                      <div key={i} className="text-gray-600 text-[16px]">
+                      <div key={i} className="text-gray-600 text-[16px] leading-[18px]">
                         {item}
                       </div>
                     );

@@ -120,8 +120,10 @@ export const landscapeFeatures3: string[] = [
   "Thoughtfully planned to welcome you home effortlessly.",
 ];
 
-export const landscapeImage = "/ResizedImages/lift.jpg"; // relative path
-export const landscapeImage1 = "/ResizedImages/basement.jpg"; // relative path
+export const landscapeImage = "/ResizedImages/EMBRACE_THE_WIND_01.jpg"; // relative path
+export const landscapeImage1 = "/ResizedImages/lift.jpg"; // relative path
+export const landscapeImage2 = "/ResizedImages/basement.jpg"; // relative path
+
 
 
 export const landscapeSectionImages = {
@@ -130,8 +132,8 @@ export const landscapeSectionImages = {
 };
 
 export const landscapeSectionImagesHomePage = {
-  planImage: "/ResizedImages/EMBRACE_THE_WIND_15.jpg",
-  renderImage: "/ResizedImages/EMBRACE_THE_WIND_12.jpg",
+  planImage: "/ResizedImages/EMBRACE_THE_WIND_21.jpg",
+  renderImage: "/ResizedImages/EMBRACE_THE_WIND_19.jpg",
 };
 
 export const landscapeTitle = [
@@ -155,22 +157,23 @@ export const landscapeTitle2 = [
 ];
 export const landscapeDescription2 = [
   "- Only 20 Floors in Its Pocket",
-  "A rare vertical icon that rises above the skyline, offering unobstructed views and exclusivity.",
-  "- Strategic S.G. Highway Location",
-  "Effortless connectivity, calm surroundings, and proximity to everything that matters.",
+  "A rare vertical icon that rises above the skyline, offering unobstructed"," views and exclusivity.",
+  
   "- Personal Patio & Spacious Balcony",
-  "Dual outdoor spaces that extend your lifestyle—morning chai, golden hour, or quiet reflection.",
+  "Dual outdoor spaces that extend your lifestyle—morning chai, golden ","hour, or quiet reflection.",
   "- Room Height of 10.25 Ft.",
-  "Generous vertical volume for light-filled interiors and a sense of spacious elegance.",
+  "Generous vertical volume for light-filled interiors and a sense of "," spacious elegance.",
 ];
 
 export const landscapeTitle3 = [
 ];
 export const landscapeDescription3 = [
+  "- Strategic S.G. Highway Location",
+  "Effortless connectivity, calm surroundings, and proximity to everything  "," that matters.",
   "- Exciting. Thrilling. Sensational.",
   "This isn’t just a high-rise—it’s a high-life",
   "- Comprehensive Amenities Suite",
-  "Swim, play, celebrate, gather, recharge. From indoor games to amphitheatre evenings, every corner serves your mood.",
+  "Swim, play, celebrate, gather, recharge. From indoor games to amphitheatre  "," evenings, every corner serves your mood.",
   "- Modern Clubhouse & Wellness Zones",
-  "Gym, movie lounge, toddler’s playroom, banquet hall and more—crafted for holistic living.",
+  "Gym, movie lounge, toddler’s playroom, banquet hall and more—crafted "," for holistic living.",
 ];
