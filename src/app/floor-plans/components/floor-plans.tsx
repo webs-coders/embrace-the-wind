@@ -48,7 +48,7 @@ export default function FloorPlansPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
       {/* Tabs */}
-      <div className="flex gap-4 mb-8 justify-center flex-wrap">
+      <div className="flex gap-4 mb-16 mt-8 justify-center flex-wrap">
         {TABS.map(tab => (
           <button
             key={tab}
