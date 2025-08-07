@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import {
-  landscapeImage,
   landscapeImage1,
   landscapeImage2,
 
