@@ -132,8 +132,8 @@ export const landscapeSectionImages = {
 };
 
 export const landscapeSectionImagesHomePage = {
-  planImage: "/ResizedImages/EMBRACE_THE_WIND_21.jpg",
-  renderImage: "/ResizedImages/EMBRACE_THE_WIND_19.jpg",
+  planImage: "/ResizedImages/EMBRACE_THE_WIND_16.jpg",
+  renderImage: "/ResizedImages/EMBRACE_THE_WIND_06.jpg",
 };
 
 export const landscapeTitle = [
