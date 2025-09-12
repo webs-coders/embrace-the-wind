@@ -1,7 +1,13 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  // Required for static export
+  output: 'export',
+  trailingSlash: true,
+
+  // Required for images to work without Next.js optimization
   images: {
+    unoptimized: true,
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
@@ -10,8 +16,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
   reactStrictMode: true,
 };
-
 
 export default nextConfig;
